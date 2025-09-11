@@ -24,6 +24,11 @@ const BlogPage: React.FC = () => {
 
   const posts: BlogPost[] = blogData;
 
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Get unique categories and tags
   const categories = ['All', ...Array.from(new Set(posts.map(post => post.category)))];
   const allTags = ['All', ...Array.from(new Set(posts.flatMap(post => post.tags)))];
@@ -47,27 +52,27 @@ const BlogPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 via-blue-600/60 to-indigo-600/80"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex justify-center mb-4 md:mb-6">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center">
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                 </svg>
               </div>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 font-poppins">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 font-poppins">
               Our <span className="text-yellow-400">Blog</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-4 max-w-3xl mx-auto font-poppins">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 mb-3 md:mb-4 max-w-3xl mx-auto font-poppins leading-relaxed px-4">
               Stay updated with the latest insights, trends, and expert guidance in clinical research and healthcare education.
             </p>
-            <p className="text-sm text-white/80 font-poppins">
+            <p className="text-xs md:text-sm text-white/80 font-poppins">
               Expert articles from industry professionals
             </p>
           </div>

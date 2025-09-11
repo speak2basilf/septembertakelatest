@@ -11,7 +11,6 @@ import Admission from './components/Admission';
 
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import QueryWidget from './components/QueryWidget';
 import CRMCourse from './pages/CRMCourse';
 import MedicalCodingCourse from './pages/MedicalCodingCourse';
 import ClinicalSASCourse from './pages/ClinicalSASCourse';
@@ -38,7 +37,6 @@ const HomePage: React.FC = () => {
         <Contact />
       </main>
       <Footer />
-      <QueryWidget />
     </>
   );
 };
@@ -50,7 +48,6 @@ const CoursePageLayout: React.FC<{ children: React.ReactNode }> = ({ children })
       <Header />
       <main>{children}</main>
       <Footer />
-      <QueryWidget />
     </>
   );
 };

@@ -24,6 +24,11 @@ const BlogDetailPage: React.FC = () => {
   const posts: BlogPost[] = blogData;
   const post = posts.find(p => p.slug === slug);
 
+  // Scroll to top when component mounts or when slug changes
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   if (!post) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50 flex items-center justify-center">
@@ -44,94 +49,101 @@ const BlogDetailPage: React.FC = () => {
   // Convert markdown-style content to HTML for display
   const formatContent = (content: string) => {
     return content
-      .replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold text-gray-900 mb-4 mt-8 font-poppins">$1</h2>')
-      .replace(/^### (.*$)/gim, '<h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6 font-poppins">$1</h3>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900">$1</strong>')
-      .replace(/^• (.*$)/gim, '<li class="text-gray-700 mb-2 font-poppins">$1</li>')
-      .replace(/^(.*:)$/gim, '<p class="text-gray-900 font-semibold mb-3 font-poppins">$1</p>')
-      .replace(/\n\n/g, '</p><p class="text-gray-700 mb-4 leading-relaxed font-poppins">')
-      .replace(/^([^<].*$)/gim, '<p class="text-gray-700 mb-4 leading-relaxed font-poppins">$1</p>');
+      // Headers
+      .replace(/^## (.*$)/gim, '<h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6 mt-8 md:mt-12 font-poppins border-b-2 border-blue-100 pb-2">$1</h2>')
+      .replace(/^### (.*$)/gim, '<h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-3 md:mb-4 mt-6 md:mt-8 font-poppins text-blue-700">$1</h3>')
+      
+      // Emphasis
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900 bg-yellow-50 px-1 rounded">$1</strong>')
+      
+      // Lists
+      .replace(/^• (.*$)/gim, '<li class="text-gray-700 mb-2 md:mb-3 font-poppins text-sm md:text-base leading-relaxed pl-2 relative before:content-[\'\'] before:absolute before:left-[-12px] before:top-[8px] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full">$1</li>')
+      
+      // Special formatting for labels/titles
+      .replace(/^(.*:)$/gim, '<p class="text-gray-900 font-semibold mb-3 md:mb-4 font-poppins text-base md:text-lg">$1</p>')
+      
+      // Emojis and special callouts
+      .replace(/👉 (.*$)/gim, '<div class="bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-orange-400 p-4 md:p-6 my-4 md:my-6 rounded-r-lg shadow-sm"><p class="text-orange-900 font-medium font-poppins flex items-start"><span class="mr-2 text-xl">👉</span><span class="text-sm md:text-base">$1</span></p></div>')
+      
+      // Bullet point lists wrapper
+      .replace(/((<li.*?<\/li>\s*)+)/g, '<ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 ml-4">$1</ul>')
+      
+      // Paragraphs
+      .replace(/\n\n/g, '</p><p class="text-gray-700 mb-4 md:mb-6 leading-relaxed font-poppins text-sm md:text-base lg:text-lg">')
+      .replace(/^([^<].*$)/gim, '<p class="text-gray-700 mb-4 md:mb-6 leading-relaxed font-poppins text-sm md:text-base lg:text-lg">$1</p>');
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
-        {post.slug === 'career-roadmap-clinical-research-professional' ? (
-          <div className="absolute inset-0">
-            <img 
-              src="/clinical-research-banner.png" 
-              alt="Clinical Research Career Banner"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-blue-600/60"></div>
-          </div>
-        ) : (
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 via-blue-600/60 to-indigo-600/80"></div>
-          </div>
-        )}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 via-blue-600/60 to-indigo-600/80"></div>
+        </div>
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => navigate('/blog')}
-            className="flex items-center text-white/80 hover:text-white mb-6 transition-colors group"
+            className="flex items-center text-white/80 hover:text-white mb-6 md:mb-8 transition-all duration-300 group hover:bg-white/10 px-3 py-2 rounded-lg"
           >
-            <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
-            Back to Blog
+            <ArrowLeft size={18} className="mr-2 group-hover:-translate-x-1 transition-transform" />
+            <span className="font-poppins text-sm md:text-base">Back to Blog</span>
           </button>
 
-          <div className="mb-6">
-            <span className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold font-poppins">
+          <div className="mb-4 md:mb-6">
+            <span className="bg-white/20 backdrop-blur-sm text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold font-poppins border border-white/20">
               {post.category}
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight font-poppins">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight font-poppins">
             {post.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-6 text-white/90">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 md:gap-6 text-white/90">
             <div className="flex items-center">
-              <User size={16} className="mr-2" />
-              <span className="font-poppins">{post.author}</span>
+              <User size={14} className="mr-2" />
+              <span className="font-poppins text-xs md:text-sm">{post.author}</span>
             </div>
             <div className="flex items-center">
-              <Calendar size={16} className="mr-2" />
-              <span className="font-poppins">{new Date(post.date).toLocaleDateString()}</span>
+              <Calendar size={14} className="mr-2" />
+              <span className="font-poppins text-xs md:text-sm">{new Date(post.date).toLocaleDateString()}</span>
             </div>
             <div className="flex items-center">
-              <Clock size={16} className="mr-2" />
-              <span className="font-poppins">{post.readTime}</span>
+              <Clock size={14} className="mr-2" />
+              <span className="font-poppins text-xs md:text-sm">{post.readTime}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Article Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-white/60 backdrop-blur-lg rounded-3xl shadow-lg overflow-hidden border border-white/20">
-          {/* Hero Image */}
-          <div className="relative h-64 md:h-96 overflow-hidden">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+        <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+          {/* Hero Image - Only show for non-clinical research posts */}
+          {post.slug !== 'career-roadmap-clinical-research-professional' && (
+            <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
 
           {/* Content */}
-          <div className="p-8 md:p-12">
+          <div className="p-6 md:p-8 lg:p-12">
             {/* Excerpt */}
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded-r-lg">
-              <p className="text-lg text-blue-900 italic font-poppins">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-4 md:p-6 mb-6 md:mb-8 rounded-r-xl shadow-sm">
+              <p className="text-base md:text-lg text-blue-900 italic font-poppins leading-relaxed">
                 {post.excerpt}
               </p>
             </div>
 
             {/* Main Content */}
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-base md:prose-lg lg:prose-xl max-w-none">
               <div
+                className="blog-content space-y-4 md:space-y-6"
                 dangerouslySetInnerHTML={{
                   __html: formatContent(post.content)
                 }}
@@ -139,31 +151,39 @@ const BlogDetailPage: React.FC = () => {
             </div>
 
             {/* Tags Section */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <div className="flex items-center mb-4">
-                <Tag className="text-blue-600 mr-2" size={20} />
-                <h4 className="text-lg font-semibold text-gray-900 font-poppins">Tags</h4>
+            <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-200">
+              <div className="flex items-center mb-3 md:mb-4">
+                <Tag className="text-blue-600 mr-2" size={18} />
+                <h4 className="text-base md:text-lg font-semibold text-gray-900 font-poppins">Related Topics</h4>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 md:gap-3">
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium font-poppins hover:bg-blue-200 transition-colors"
+                    className="bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-800 border border-blue-200 px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium font-poppins hover:from-blue-100 hover:to-indigo-100 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
                   >
-                    {tag}
+                    #{tag}
                   </span>
                 ))}
               </div>
             </div>
 
             {/* Navigation */}
-            <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-              <button
-                onClick={() => navigate('/blog')}
-                className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors font-semibold font-poppins shadow-lg hover:shadow-xl hover:scale-105 duration-300"
-              >
-                ← Back to All Articles
-              </button>
+            <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-200">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button
+                  onClick={() => navigate('/blog')}
+                  className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-semibold font-poppins shadow-lg hover:shadow-xl hover:scale-105 text-sm md:text-base"
+                >
+                  ← Back to All Articles
+                </button>
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="w-full sm:w-auto bg-gray-100 text-gray-700 border border-gray-300 px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-gray-200 transition-all duration-300 font-medium font-poppins shadow-sm hover:shadow-md text-sm md:text-base"
+                >
+                  ↑ Back to Top
+                </button>
+              </div>
             </div>
           </div>
         </div>
