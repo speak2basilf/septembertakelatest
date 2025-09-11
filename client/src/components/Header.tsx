@@ -268,6 +268,13 @@ const Header: React.FC = () => {
             </button>
 
             <button
+              onClick={() => navigate('/blog')}
+              className="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium hover:scale-105 px-4 py-2 rounded-lg font-poppins"
+            >
+              Blog
+            </button>
+
+            <button
               onClick={() => handleTabClick('contact', '#contact')}
               className={getTabClasses('contact')}
             >
@@ -390,6 +397,13 @@ const Header: React.FC = () => {
                 className="block w-full text-left px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium font-poppins"
               >
                 Placements
+              </button>
+
+              <button
+                onClick={() => navigate('/blog')}
+                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium font-poppins"
+              >
+                Blog
               </button>
 
               <button
