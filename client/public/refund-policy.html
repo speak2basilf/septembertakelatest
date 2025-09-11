@@ -5,124 +5,439 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Refund Policy - CliniGlobal</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #004080 0%, #FF8C00 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #dbeafe 100%);
       min-height: 100vh;
     }
-    header {
-      background: linear-gradient(135deg, #004080 0%, #FF8C00 100%);
-      color: #fff;
-      padding: 40px 20px;
+
+    /* Header Section */
+    .header {
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      color: white;
+      padding: 64px 20px;
       text-align: center;
-      font-size: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(79, 70, 229, 0.6) 50%, rgba(79, 70, 229, 0.8) 100%);
+      opacity: 0.2;
+    }
+
+    .header-content {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(16px);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header h1 {
+      font-size: clamp(1.875rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 24px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .header .highlight {
+      color: #fbbf24;
+    }
+
+    .header p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 16px;
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header .date {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 64px 16px;
+    }
+
+    /* Content Sections */
+    .content-section {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      margin-right: 16px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111827;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .content-section p {
+      color: #374151;
+      margin-bottom: 16px;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.75;
+    }
+
+    .content-section ul {
+      list-style: none;
+      padding-left: 16px;
+    }
+
+    .content-section li {
+      color: #374151;
+      margin-bottom: 8px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+    }
+
+    .content-section li::before {
+      content: '•';
+      color: #2563eb;
       font-weight: bold;
-      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.3);
+      position: absolute;
+      left: -16px;
     }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
-      border: 2px solid #FF8C00;
+
+    .highlight-box {
+      background: #dbeafe;
+      padding: 16px;
+      border-radius: 12px;
+      margin: 16px 0;
     }
-    h2 {
-      color: #004080;
-      margin-top: 30px;
-      border-left: 4px solid #FF8C00;
-      padding-left: 15px;
-      font-size: 24px;
+
+    .highlight-box p {
+      color: #1e40af;
+      font-weight: 500;
+      margin: 0;
     }
-    p {
-      color: #333;
-      margin-bottom: 15px;
+
+    .important-box {
+      background: #fef3c7;
+      padding: 16px;
+      border-radius: 12px;
+      margin: 16px 0;
     }
-    b {
-      color: #004080;
+
+    .important-box p {
+      color: #92400e;
+      font-weight: 500;
+      margin: 0;
     }
-    .highlight {
-      background: linear-gradient(135deg, rgba(0, 64, 128, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px 0;
-      border-left: 5px solid #FF8C00;
-    }
-    .contact-info {
-      background: linear-gradient(135deg, #004080 0%, #FF8C00 100%);
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
       color: white;
-      padding: 25px;
-      border-radius: 10px;
-      margin: 20px 0;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      text-align: center;
     }
-    .contact-info b {
-      color: #fff;
+
+    .contact-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-family: 'Poppins', sans-serif;
     }
-    .back-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #004080 0%, #FF8C00 100%);
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 25px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
+
+    .contact-section p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 32px;
+      font-family: 'Poppins', sans-serif;
     }
-    .back-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.3);
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-item .label {
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-item .value {
+      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-note {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 24px;
+      margin-top: 32px;
+    }
+
+    .footer-note p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
+    /* SVG Icons */
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .icon-large {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .content-section {
+        padding: 24px;
+      }
+      
+      .main-content {
+        padding: 32px 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>Refund Policy</header>
-  <div class="container">
-    <a href="/" class="back-btn">← Back to Home</a>
-    
-    <div class="highlight">
-      <h2>Non-Refundable Fee & Payment Policy – CliniGlobal</h2>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="header-content">
+      <div class="icon-container">
+        <div class="icon-box">
+          <svg class="icon-large" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+      </div>
+      <h1>Refund <span class="highlight">Policy</span></h1>
+      <p>Our transparent refund policy ensures clarity and fairness for all students enrolling in CliniGlobal programs.</p>
+      <p class="date">Last updated: January 15, 2024</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <!-- Introduction -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14,2 14,8 20,8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10,9 9,9 8,9"></polyline>
+        </svg>
+        <h2 class="section-title">Non-Refundable Fee & Payment Policy</h2>
+      </div>
       <p>
-        At <b>CliniGlobal</b>, we provide specialized training in Clinical Research, Clinical SAS, and Medical Coding with placement assistance. To maintain clarity and fairness, we follow a <b>strict Non-Refundable Fee Policy</b>. By enrolling in our programs, students acknowledge and agree to the following terms:
+        At <strong>CliniGlobal</strong>, we provide specialized training in Clinical Research, Clinical SAS, and Medical Coding with placement assistance. To maintain clarity and fairness, we follow a <strong>strict Non-Refundable Fee Policy</strong>. By enrolling in our programs, students acknowledge and agree to the following terms:
       </p>
+      <div class="important-box">
+        <p><strong>Important:</strong> All fees paid to CliniGlobal are strictly non-refundable and non-transferable once admission is confirmed.</p>
+      </div>
     </div>
 
-    <h2>1. Non-Refundable Payments</h2>
-    <p>All course fees, registration fees, and administrative charges paid to CliniGlobal are strictly non-refundable and non-transferable. Once admission is confirmed or classes have commenced, no refunds will be provided under any circumstances.</p>
-
-    <h2>2. Course Fee & Enrollment Policy</h2>
-    <p>Students must successfully complete the initial installment payment or finalize the loan process before the commencement of the academic batch. Enrollment rules and admission timelines must be followed, failing which admission will be revoked without refund.</p>
-
-    <h2>3. Loan & Financial Agreement</h2>
-    <p>Students opting for education loans through our Loan Partner must comply with their terms. By applying, students accept CliniGlobal's non-refundable policy.</p>
-
-    <h2>4. Program Cancellation by CliniGlobal</h2>
-    <p>If CliniGlobal cancels a program, students are entitled to a 100% refund. Otherwise, no refunds are entertained.</p>
-
-    <h2>5. Placement Assistance Policy</h2>
-    <p>Placement assistance is a support service and not a guaranteed job offer. No refunds will be given for dissatisfaction with placement opportunities.</p>
-
-    <h2>6. Dispute Resolution & Contact</h2>
-    <div class="contact-info">
-      <p>
-        <b>CliniGlobal Research Institute</b><br/>
-        303, Meghamala Apartment Road,<br/>
-        Kumar Basti, Srinivasa Nagar, Ameerpet,<br/>
-        Hyderabad, Telangana – 500082<br/>
-        📞 +91 70937 94447<br/>
-        📧 hr@cliniglobal.com
-      </p>
+    <!-- Non-Refundable Payments -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="15" y1="9" x2="9" y2="15"></line>
+          <line x1="9" y1="9" x2="15" y2="15"></line>
+        </svg>
+        <h2 class="section-title">1. Non-Refundable Payments</h2>
+      </div>
+      <p>All course fees, registration fees, and administrative charges paid to CliniGlobal are strictly non-refundable and non-transferable. Once admission is confirmed or classes have commenced, no refunds will be provided under any circumstances.</p>
     </div>
-    <p>All disputes will be subject to the jurisdiction of courts in Hyderabad, Telangana.</p>
 
-    <h2>7. Legal Acknowledgment</h2>
-    <p>This Non-Refundable Policy is legally binding. Students are advised to seek legal or financial advice before proceeding with payments or loan agreements.</p>
-    
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="/" class="back-btn">Return to Homepage</a>
+    <!-- Course Fee & Enrollment Policy -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+        </svg>
+        <h2 class="section-title">2. Course Fee & Enrollment Policy</h2>
+      </div>
+      <p>Students must successfully complete the initial installment payment or finalize the loan process before the commencement of the academic batch. Enrollment rules and admission timelines must be followed, failing which admission will be revoked without refund.</p>
+    </div>
+
+    <!-- Loan & Financial Agreement -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <h2 class="section-title">3. Loan & Financial Agreement</h2>
+      </div>
+      <p>Students opting for education loans through our Loan Partner must comply with their terms. By applying, students accept CliniGlobal's non-refundable policy.</p>
+    </div>
+
+    <!-- Program Cancellation -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <path d="M9 12l2 2 4-4"></path>
+        </svg>
+        <h2 class="section-title">4. Program Cancellation by CliniGlobal</h2>
+      </div>
+      <p>If CliniGlobal cancels a program, students are entitled to a 100% refund. Otherwise, no refunds are entertained.</p>
+      <div class="highlight-box">
+        <p><strong>Note:</strong> This is the only circumstance under which refunds will be provided.</p>
+      </div>
+    </div>
+
+    <!-- Placement Assistance Policy -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <h2 class="section-title">5. Placement Assistance Policy</h2>
+      </div>
+      <p>Placement assistance is a support service and not a guaranteed job offer. No refunds will be given for dissatisfaction with placement opportunities.</p>
+    </div>
+
+    <!-- Legal Acknowledgment -->
+    <div class="content-section">
+      <div class="section-header">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="#7c2d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14,2 14,8 20,8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+        </svg>
+        <h2 class="section-title">6. Legal Acknowledgment</h2>
+      </div>
+      <p>This Non-Refundable Policy is legally binding. Students are advised to seek legal or financial advice before proceeding with payments or loan agreements.</p>
+      <p>All disputes will be subject to the jurisdiction of courts in Hyderabad, Telangana.</p>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Refund Policy, please contact us:</p>
+      
+      <div class="contact-grid">
+        <div>
+          <div class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>
+              <div class="label">Email</div>
+              <div class="value">hr@cliniglobal.com</div>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <div>
+              <div class="label">Phone</div>
+              <div class="value">+91 70937 94447</div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div>
+              <div class="label">Address</div>
+              <div class="value">
+                CliniGlobal Research Institute<br/>
+                303, Meghamala Apartment Road,<br/>
+                Kumar Basti, Srinivasa Nagar, Ameerpet,<br/>
+                Hyderabad, Telangana – 500082
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-note">
+        <p>This Refund Policy is effective as of January 15, 2024, and may be updated from time to time.</p>
+      </div>
     </div>
   </div>
 </body>
