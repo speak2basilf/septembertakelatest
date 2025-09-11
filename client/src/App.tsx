@@ -21,6 +21,7 @@ import PlacementsPage from './pages/PlacementsPage';
 import AccreditationsPage from './pages/AccreditationsPage';
 import LearningCentersPage from './pages/LearningCentersPage';
 import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 
 // Main Home Page Component
@@ -93,6 +94,11 @@ function App() {
           <Route path="/blog" element={
             <CoursePageLayout>
               <BlogPage />
+            </CoursePageLayout>
+          } />
+          <Route path="/blog/:slug" element={
+            <CoursePageLayout>
+              <BlogDetailPage />
             </CoursePageLayout>
           } />
           <Route path="/privacy-policy" element={
