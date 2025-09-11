@@ -57,9 +57,20 @@ const BlogDetailPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 via-blue-600/60 to-indigo-600/80"></div>
-        </div>
+        {post.slug === 'career-roadmap-clinical-research-professional' ? (
+          <div className="absolute inset-0">
+            <img 
+              src="/clinical-research-banner.png" 
+              alt="Clinical Research Career Banner"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-blue-600/60"></div>
+          </div>
+        ) : (
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 via-blue-600/60 to-indigo-600/80"></div>
+          </div>
+        )}
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
