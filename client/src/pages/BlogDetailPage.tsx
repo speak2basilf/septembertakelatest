@@ -49,28 +49,39 @@ const BlogDetailPage: React.FC = () => {
   // Convert markdown-style content to HTML for display
   const formatContent = (content: string) => {
     return content
-      // Headers
-      .replace(/^## (.*$)/gim, '<h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6 mt-8 md:mt-12 font-poppins border-b-2 border-blue-100 pb-2">$1</h2>')
-      .replace(/^### (.*$)/gim, '<h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-3 md:mb-4 mt-6 md:mt-8 font-poppins text-blue-700">$1</h3>')
+      // Section dividers
+      .replace(/^---$/gim, '<div class="border-t-2 border-gradient-to-r from-blue-100 to-orange-100 my-10 md:my-12"></div>')
       
-      // Emphasis
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900 bg-yellow-50 px-1 rounded">$1</strong>')
+      // Headers with better spacing and styling
+      .replace(/^## (.*$)/gim, '<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8 mt-10 md:mt-12 font-poppins border-b-2 border-blue-200 pb-3 flex items-center"><span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">$1</span></h2>')
+      .replace(/^### (.*$)/gim, '<h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-4 md:mb-6 mt-8 md:mt-10 font-poppins">$1</h3>')
+      .replace(/^#### (.*$)/gim, '<h4 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 mt-6 md:mt-8 font-poppins">$1</h4>')
       
-      // Lists
-      .replace(/^• (.*$)/gim, '<li class="text-gray-700 mb-2 md:mb-3 font-poppins text-sm md:text-base leading-relaxed pl-2 relative before:content-[\'\'] before:absolute before:left-[-12px] before:top-[8px] before:w-2 before:h-2 before:bg-blue-500 before:rounded-full">$1</li>')
+      // HTML div elements (pass through)
+      .replace(/<div class="([^"]*)">/g, '<div class="$1">')
+      .replace(/<\/div>/g, '</div>')
+      
+      // Blockquotes  
+      .replace(/^> (.*$)/gim, '<blockquote class="bg-gradient-to-r from-blue-50 to-orange-50 border-l-4 border-blue-400 p-4 md:p-6 my-6 md:my-8 rounded-r-lg shadow-sm italic text-blue-900 font-medium">$1</blockquote>')
+      
+      // Emphasis with better styling
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900">$1</strong>')
+      
+      // Lists with proper markdown syntax
+      .replace(/^- (.*$)/gim, '<li class="text-gray-700 mb-2 md:mb-3 font-poppins text-sm md:text-base leading-relaxed flex items-start"><span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>$1</span></li>')
       
       // Special formatting for labels/titles
       .replace(/^(.*:)$/gim, '<p class="text-gray-900 font-semibold mb-3 md:mb-4 font-poppins text-base md:text-lg">$1</p>')
       
       // Emojis and special callouts
-      .replace(/👉 (.*$)/gim, '<div class="bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-orange-400 p-4 md:p-6 my-4 md:my-6 rounded-r-lg shadow-sm"><p class="text-orange-900 font-medium font-poppins flex items-start"><span class="mr-2 text-xl">👉</span><span class="text-sm md:text-base">$1</span></p></div>')
+      .replace(/👉 (.*$)/gim, '<div class="bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-orange-400 p-4 md:p-6 my-4 md:my-6 rounded-r-lg shadow-sm"><p class="text-orange-900 font-medium font-poppins flex items-start"><span class="mr-3 text-xl flex-shrink-0">👉</span><span class="text-sm md:text-base">$1</span></p></div>')
       
       // Bullet point lists wrapper
-      .replace(/((<li.*?<\/li>\s*)+)/g, '<ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 ml-4">$1</ul>')
+      .replace(/((<li.*?<\/li>\s*)+)/g, '<ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 ml-2">$1</ul>')
       
-      // Paragraphs
-      .replace(/\n\n/g, '</p><p class="text-gray-700 mb-4 md:mb-6 leading-relaxed font-poppins text-sm md:text-base lg:text-lg">')
-      .replace(/^([^<].*$)/gim, '<p class="text-gray-700 mb-4 md:mb-6 leading-relaxed font-poppins text-sm md:text-base lg:text-lg">$1</p>');
+      // Paragraphs with better spacing
+      .replace(/\n\n/g, '</p><p class="text-gray-700 mb-4 md:mb-6 leading-relaxed font-poppins text-sm md:text-base">')
+      .replace(/^([^<].*$)/gim, '<p class="text-gray-700 mb-4 md:mb-6 leading-relaxed font-poppins text-sm md:text-base">$1</p>');
   };
 
   return (
@@ -141,9 +152,9 @@ const BlogDetailPage: React.FC = () => {
             </div>
 
             {/* Main Content */}
-            <div className="prose prose-base md:prose-lg lg:prose-xl max-w-none">
+            <div className="max-w-4xl mx-auto">
               <div
-                className="blog-content space-y-4 md:space-y-6"
+                className="blog-content space-y-4 md:space-y-6 text-justify leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: formatContent(post.content)
                 }}
