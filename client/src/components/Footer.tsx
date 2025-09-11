@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
                 Terms & Conditions
               </a>
               <a 
-                href="#" 
+                href="/refund-policy.html" 
                 className="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-300 font-poppins hover:underline"
               >
                 Refund Policy
