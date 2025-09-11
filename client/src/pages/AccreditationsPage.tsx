@@ -71,12 +71,12 @@ const AccreditationsPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Accreditations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch">
           {accreditations.map((accreditation, index) => (
-            <div key={index} className="group bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:bg-white/80 hover:scale-105 transition-all duration-500">
+            <div key={index} className="group bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:bg-white/80 hover:-translate-y-1 transition-all duration-500 h-full flex flex-col">
               <div className="text-center">
                 {/* Logo Container */}
-                <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-2xl shadow-lg flex items-center justify-center p-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-32 h-32 shrink-0 mx-auto mb-6 bg-white rounded-2xl shadow-lg flex items-center justify-center p-4 group-hover:scale-110 transition-transform duration-300">
                   <img 
                     src={accreditation.logo} 
                     alt={accreditation.name}
@@ -85,21 +85,23 @@ const AccreditationsPage: React.FC = () => {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 font-poppins group-hover:text-blue-600 transition-colors">
-                  {accreditation.name}
-                </h3>
-                
-                <div className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                  {accreditation.category}
+                <div className="space-y-3 min-h-28">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 font-poppins group-hover:text-blue-600 transition-colors">
+                    {accreditation.name}
+                  </h3>
+                  
+                  <div className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                    {accreditation.category}
+                  </div>
+                  
+                  <p className="text-gray-700 font-medium mb-4 font-poppins">
+                    {accreditation.description}
+                  </p>
+                  
+                  <p className="text-gray-600 text-sm leading-relaxed font-poppins">
+                    {accreditation.details}
+                  </p>
                 </div>
-                
-                <p className="text-gray-700 font-medium mb-4 font-poppins">
-                  {accreditation.description}
-                </p>
-                
-                <p className="text-gray-600 text-sm leading-relaxed font-poppins">
-                  {accreditation.details}
-                </p>
               </div>
             </div>
           ))}

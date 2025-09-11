@@ -62,12 +62,12 @@ const Accreditations: React.FC = () => {
         </div>
 
         {/* Accreditations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch">
           {accreditations.map((accreditation, index) => (
-            <div key={index} className="group">
-              <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl p-6 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+            <div key={index} className="group h-full">
+              <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center h-full flex flex-col">
                 {/* Logo container */}
-                <div className="h-20 flex items-center justify-center mb-4">
+                <div className="h-20 shrink-0 flex items-center justify-center mb-4">
                   <div className="w-full h-full flex items-center justify-center">
                     <img 
                       src={accreditation.logo} 
@@ -91,7 +91,7 @@ const Accreditations: React.FC = () => {
                 </div>
                 
                 {/* Title and description */}
-                <div>
+                <div className="mt-2 space-y-2 min-h-20">
                   <h3 className="text-sm font-bold text-gray-900 mb-2 font-poppins">
                     {accreditation.title}
                   </h3>
