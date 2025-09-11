@@ -56,13 +56,13 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 3000
+  // ALWAYS serve the app on port 5000 for Replit compatibility
   // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 3000;
+  // Bind to 0.0.0.0 to accept external connections in Replit
+  const port = 5000;
   server.listen({
     port,
-    host: "localhost",
+    host: "0.0.0.0",
   }, () => {
     log(`serving on port ${port}`);
   });
