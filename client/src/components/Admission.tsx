@@ -8,38 +8,32 @@ const Admission: React.FC = () => {
     {
       name: 'PG Diploma in Clinical Research',
       eligibility: 'Bachelor\'s degree in Life Sciences, Medicine, Pharmacy, or related field',
-      duration: '12 Months',
-      nextBatch: 'March 15, 2024'
+      duration: '12 Months'
     },
     {
       name: 'Advanced Diploma in Clinical SAS',
       eligibility: 'Bachelor\'s degree in Statistics, Mathematics, Computer Science, or related field',
-      duration: '6 Months',
-      nextBatch: 'March 20, 2024'
+      duration: '6 Months'
     },
     {
       name: 'Advanced Diploma in Bioinformatics',
       eligibility: 'Bachelor\'s degree in Biology, Biotechnology, Computer Science, or related field',
-      duration: '6 Months',
-      nextBatch: 'March 25, 2024'
+      duration: '6 Months'
     },
     {
       name: 'Advanced Diploma in Medical Coding',
       eligibility: 'Bachelor\'s degree in any field with basic medical knowledge',
-      duration: '6 Months',
-      nextBatch: 'March 30, 2024'
+      duration: '6 Months'
     },
     {
       name: 'PG Diploma in AI & ML Healthcare',
       eligibility: 'Bachelor\'s degree in Computer Science, Engineering, Mathematics, or related field',
-      duration: '12 Months',
-      nextBatch: 'April 1, 2024'
+      duration: '12 Months'
     },
     {
       name: 'MBA in Healthcare Management',
       eligibility: 'Bachelor\'s degree in any field with minimum 50% marks',
-      duration: '24 Months',
-      nextBatch: 'April 10, 2024'
+      duration: '24 Months'
     }
   ];
 
@@ -290,10 +284,6 @@ const Admission: React.FC = () => {
                           <div>
                             <span className="font-medium text-gray-700">Duration:</span>
                             <p className="text-gray-600">{course.duration}</p>
-                          </div>
-                          <div>
-                            <span className="font-medium text-gray-700">Next Batch:</span>
-                            <p className="text-gray-600">{course.nextBatch}</p>
                           </div>
                         </div>
                       </div>
