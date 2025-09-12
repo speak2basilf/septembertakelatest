@@ -5,15 +5,15 @@ const LearningCentersPage: React.FC = () => {
   const centers = [
     {
       id: 'hyderabad',
-      name: 'Learning Center – Hyderabad',
+      name: 'Learning Center - Hyderabad',
       type: 'Learning Center',
       address: {
         line1: 'CliniGlobal Research Institute',
         line2: '303, Meghamala Apartment Road,',
         line3: 'Kumar Basti, Srinivasa Nagar, Ameerpet,',
-        line4: 'Hyderabad – 500082, Telangana'
+        line4: 'Hyderabad, Telangana - 500082'
       },
-      phones: ['+919052992967', '+917093794447'],
+      phones: ['+917093794447'],
       email: 'hyderabad@cliniglobal.com',
       mapUrl: 'https://maps.google.com/?q=Ameerpet,Hyderabad',
       facilities: ['Modern Classrooms', 'Computer Lab', 'Library', 'Student Lounge'],
@@ -26,15 +26,15 @@ const LearningCentersPage: React.FC = () => {
     },
     {
       id: 'bangalore',
-      name: 'Corporate Office – Bengaluru',
+      name: 'Corporate Office - Bengaluru',
       type: 'Corporate Office',
       address: {
         line1: 'CliniGlobal Research Institute',
         line2: '125, 7th Cross Rd, Off Bannerghatta Rd,',
         line3: 'Dollar Layout, BTM 2nd Stage,',
-        line4: 'Bengaluru – 560076, Karnataka'
+        line4: 'Bengaluru - 500076'
       },
-      phones: ['+919052992967', '+917093794447'],
+      phones: ['+917093794447'],
       email: 'bangalore@cliniglobal.com',
       mapUrl: 'https://maps.google.com/?q=BTM+2nd+Stage,Bangalore',
       facilities: ['Executive Offices', 'Conference Rooms', 'Training Halls', 'Reception'],

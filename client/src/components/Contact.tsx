@@ -223,7 +223,7 @@ const Contact: React.FC = () => {
                     <p className="text-gray-600">Mon - Sat: 9:00 AM - 7:00 PM</p>
                     <p className="text-gray-600">Sunday: 10:00 AM - 4:00 PM</p>
                   </div>
-                <p className="text-gray-600">+917093794447</p>
+                </div>
               </div>
             </div>
 
@@ -343,6 +343,101 @@ const Contact: React.FC = () => {
           </div>
         )}
 
+        {/* Request Callback Tab */}
+        {activeTab === 'callback' && (
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white/40 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-2xl hover:bg-white/50 transition-all duration-500">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/30 to-indigo-400/30 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="text-blue-600" size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Request a Callback</h3>
+                <p className="text-gray-600">Our counselors will call you back within 24 hours for personalized assistance</p>
+              </div>
+
+              <form onSubmit={handleCallbackSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="callback-name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="callback-name"
+                      name="name"
+                      value={callbackForm.name}
+                      onChange={handleCallbackChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/50 backdrop-blur-md border border-white/30 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white/70 transition-all duration-300"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="callback-phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      id="callback-phone"
+                      name="phone"
+                      value={callbackForm.phone}
+                      onChange={handleCallbackChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/50 backdrop-blur-md border border-white/30 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white/70 transition-all duration-300"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="preferred-time" className="block text-sm font-medium text-gray-700 mb-2">
+                      Preferred Time
+                    </label>
+                    <select
+                      id="preferred-time"
+                      name="preferredTime"
+                      value={callbackForm.preferredTime}
+                      onChange={handleCallbackChange}
+                      className="w-full px-4 py-3 bg-white/50 backdrop-blur-md border border-white/30 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white/70 transition-all duration-300"
+                    >
+                      <option value="">Select preferred time</option>
+                      <option value="morning">Morning (9 AM - 12 PM)</option>
+                      <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                      <option value="evening">Evening (4 PM - 7 PM)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="callback-course" className="block text-sm font-medium text-gray-700 mb-2">
+                      Interested Course
+                    </label>
+                    <select
+                      id="callback-course"
+                      name="course"
+                      value={callbackForm.course}
+                      onChange={handleCallbackChange}
+                      className="w-full px-4 py-3 bg-white/50 backdrop-blur-md border border-white/30 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white/70 transition-all duration-300"
+                    >
+                      <option value="">Select a course</option>
+                      {courses.map((course, index) => (
+                        <option key={index} value={course}>{course}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600/90 to-indigo-600/90 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl hover:from-blue-700/90 hover:to-indigo-700/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center space-x-2"
+                >
+                  <span>Request Callback</span>
+                  <Calendar size={20} />
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+
         {/* Locations Tab */}
         {activeTab === 'locations' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -352,7 +447,7 @@ const Contact: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-400/30 to-indigo-400/30 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <MapPin className="text-blue-600" size={28} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{location.city} Center</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{location.city}</h3>
                 </div>
                 
                 <div className="space-y-4">
@@ -473,6 +568,7 @@ const Contact: React.FC = () => {
               </form>
             </div>
           </div>
+        )}
         )}
 
         {/* Quick Contact Options */}
