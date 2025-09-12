@@ -131,17 +131,12 @@ const Hero: React.FC = () => {
           {/* Right Content - CliniGlobal Instagram Post */}
           <div className="relative">
             <div className="relative bg-white/40 backdrop-blur-lg border border-white/30 p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-              {/* CliniGlobal Instagram Post Image */}
+              {/* CliniGlobal Student Hero Image */}
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <img 
-                  src="/cliniglobal-professional.png"
-                  alt="CliniGlobal Research Institute - Happy Student" 
+                  src="/hero-student.png"
+                  alt="CliniGlobal Research Institute - Empowering Clinical Careers" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    // Fallback to a default image if the main image fails to load
-                    const target = e.currentTarget as HTMLImageElement;
-                    target.src = "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop";
-                  }}
                 />
               </div>
               
