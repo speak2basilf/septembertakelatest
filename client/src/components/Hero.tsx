@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
-                Learn, Advance,
+                <span className="font-normal">Learn, Advance,</span>
                 <span className="block text-blue-600">
                   Accelerate Your Career
                 </span>
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-normal font-poppins text-center">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-normal font-poppins text-center max-w-4xl mx-auto">
                 Step into the Future of Healthcare with New-Age Programs like Clinical Research, Medical Coding, 
                 Clinical SAS, Bioinformatics, AI & ML in Healthcare, MBA in Healthcare, and more – designed to 
                 equip you for tomorrow's medical and healthcare landscape.
