@@ -231,21 +231,47 @@ const Admission: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {applicationSteps.map((step, index) => (
-                <div key={index} className="relative bg-white/40 backdrop-blur-lg border border-white/20 p-6 rounded-3xl shadow-lg hover:shadow-2xl hover:bg-white/60 hover:scale-105 transition-all duration-500">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400/30 to-indigo-400/30 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <step.icon className="text-blue-600" size={28} />
+            {/* Professional Workflow Diagram */}
+            <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg">
+              <div className="relative">
+                {/* Connecting Lines */}
+                <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 transform -translate-y-1/2"></div>
+                
+                {/* Steps Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 relative z-10">
+                  {applicationSteps.map((step, index) => (
+                    <div key={index} className="relative group">
+                      {/* Step Card */}
+                      <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:scale-105">
+                        {/* Step Number Badge */}
+                        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
+                          {step.step}
+                        </div>
+                        
+                        {/* Icon */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                          <step.icon className="text-blue-600" size={28} />
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="text-center">
+                          <h4 className="text-base font-bold text-gray-900 mb-2 leading-tight">{step.title}</h4>
+                          <p className="text-gray-600 text-xs leading-relaxed">{step.description}</p>
+                        </div>
+                      </div>
+                      
+                      {/* Arrow for larger screens */}
+                      {index < applicationSteps.length - 1 && (
+                        <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-20">
+                          <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                            <ArrowRight className="text-white" size={14} />
+                          </div>
+                        </div>
+                      )}
                     </div>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                      {step.step}
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
 
             <div className="text-center">

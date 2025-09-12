@@ -6,6 +6,10 @@ import logo3 from '@assets/logo 3_1753167527589.png';
 import logo4 from '@assets/logo 4 copy_1753167527590.jpeg';
 import logo5 from '@assets/logo 5_1753167527593.jpeg';
 
+// Skill India and NSDC logos (using placeholder URLs as actual logos would need to be provided)
+const skillIndiaLogo = 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop';
+const nsdcLogo = 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop';
+
 const Accreditations: React.FC = () => {
   const accreditations = [
     {
@@ -32,6 +36,16 @@ const Accreditations: React.FC = () => {
       logo: logo5,
       title: 'Asian International University, Manipur',
       description: 'Validated by healthcare leaders'
+    },
+    {
+      logo: skillIndiaLogo,
+      title: 'Skill India',
+      description: 'Government of India skill development initiative'
+    },
+    {
+      logo: nsdcLogo,
+      title: 'NSDC',
+      description: 'National Skill Development Corporation'
     }
   ];
 

@@ -97,20 +97,20 @@ const Contact: React.FC = () => {
 
   const locations = [
     {
-      city: 'Bangalore',
-      address: 'CliniGlobal Research',
-      fullAddress: '125, 7th Cross Road, Off Bannerghatta Road, Dollar Layout, BTM 2nd Stage',
-      pincode: 'Bangalore, Karnataka 560068',
-      phone: '+919052992967',
-      email: 'admin@cliniglobal.com'
-    },
-    {
-      city: 'Bengaluru',
+      city: 'Corporate Office - Bengaluru',
       address: 'CliniGlobal Research Institute',
       fullAddress: '125, 7th Cross Rd, Off Bannerghatta Rd, Dollar Layout, BTM 2nd Stage',
-      pincode: 'Bengaluru – 560076, Karnataka',
-      phones: ['+917093794447', '+919629752834'],
+      pincode: 'Bengaluru - 500076',
+      phone: '+917093794447',
       email: 'bangalore@cliniglobal.com'
+    },
+    {
+      city: 'Learning Center - Hyderabad',
+      address: 'CliniGlobal Research Institute',
+      fullAddress: '303, Meghamala Apartment road, Kumar Basti, Srinivasa Nagar, Ameerpet',
+      pincode: 'Hyderabad, Telangana - 500082',
+      phone: '+917093794447',
+      email: 'hyderabad@cliniglobal.com'
     }
   ];
 
@@ -199,7 +199,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+919052992967</p>
+                    <p className="text-gray-600">+917093794447</p>
                   </div>
                 </div>
 
@@ -223,7 +223,7 @@ const Contact: React.FC = () => {
                     <p className="text-gray-600">Mon - Sat: 9:00 AM - 7:00 PM</p>
                     <p className="text-gray-600">Sunday: 10:00 AM - 4:00 PM</p>
                   </div>
-                </div>
+                <p className="text-gray-600">+917093794447</p>
               </div>
             </div>
 
@@ -486,10 +486,10 @@ const Contact: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600/90 to-indigo-600/90 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full hover:from-blue-700/90 hover:to-indigo-700/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                Call Now: +919052992967
+                Call Now: +917093794447
               </button>
               <button 
-                onClick={() => window.open('https://wa.me/919052992967?text=Hello%20CliniGlobal,%20I%20would%20like%20to%20know%20more%20about%20your%20healthcare%20courses.', '_blank')}
+                onClick={() => window.open('https://wa.me/917093794447?text=Hello%20CliniGlobal,%20I%20would%20like%20to%20know%20more%20about%20your%20healthcare%20courses.', '_blank')}
                 className="bg-white/20 backdrop-blur-md border border-blue-600/30 text-blue-600 px-8 py-3 rounded-full hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 WhatsApp Chat
