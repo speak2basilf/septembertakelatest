@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, CheckCircle, DollarSign, Calendar, Download, Users, Clock, Award, Heart, Star, Sparkles, GraduationCap, BookOpen } from 'lucide-react';
+import { FileText, CheckCircle, DollarSign, Calendar, Download, Users, Clock, Award, Heart, Star, Sparkles, GraduationCap, BookOpen, ArrowRight } from 'lucide-react';
 
 const Admission: React.FC = () => {
   const [activeTab, setActiveTab] = useState('apply');
