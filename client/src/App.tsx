@@ -22,6 +22,7 @@ import LearningCentersPage from './pages/LearningCentersPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import StudentsTransformation from './components/StudentsTransformation';
 
 // Main Home Page Component
 const HomePage: React.FC = () => {
@@ -33,6 +34,7 @@ const HomePage: React.FC = () => {
         <About />
         <Accreditations />
         <IndustryTrainingPrograms />
+        <StudentsTransformation />
         <Admission />
         <Contact />
       </main>
