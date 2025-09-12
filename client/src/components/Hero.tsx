@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
             <div className="relative bg-white/40 backdrop-blur-lg border border-white/30 p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
               {/* CliniGlobal Student Hero Image */}
               <img 
-                src="/cliniglobal-empowering-careers.png" 
+                src="/indian-student-hero.png" 
                 alt="CliniGlobal Research Institute - Empowering Clinical Careers" 
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
