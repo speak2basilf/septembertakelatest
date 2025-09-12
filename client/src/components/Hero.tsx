@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Calendar, Award, Users, BookOpen, Heart, Star, Sparkles, Stethoscope, Activity, Brain, Microscope, Pill, Shield, Zap, Database } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import cliniglobalImage from '/image copy copy copy.png';
+import cliniglobalImage from '/image copy copy copy copy.png';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
