@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-normal font-poppins text-left sm:text-center">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-normal font-poppins text-center">
                 Step into the Future of Healthcare with New-Age Programs like Clinical Research, Medical Coding, 
                 Clinical SAS, Bioinformatics, AI & ML in Healthcare, MBA in Healthcare, and more – designed to 
                 equip you for tomorrow's medical and healthcare landscape.
