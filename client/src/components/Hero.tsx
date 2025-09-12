@@ -132,11 +132,6 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="relative bg-white/40 backdrop-blur-lg border border-white/30 p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
               {/* CliniGlobal Student Hero Image */}
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
-                <img 
-                  src="/hero-student.png"
-                  alt="CliniGlobal Research Institute - Empowering Clinical Careers" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               
