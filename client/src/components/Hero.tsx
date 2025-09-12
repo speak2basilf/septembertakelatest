@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
                 <span className="font-normal">Learn, Advance,</span>
                 <span className="block text-blue-600">
-                  Accelerate Your Career
+                  <span className="font-normal">Accelerate Your Career</span>
                 </span>
                 <span className="block text-2xl md:text-4xl group cursor-pointer font-poppins text-gray-800">
                   With 
