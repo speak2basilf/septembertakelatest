@@ -603,3 +603,17 @@
     transform: translateX(calc(-200px * 5)); /* Move by width of first set of logos */
   }
 }
+
+/* Enhanced scrolling animation for accreditations */
+.animate-scroll-horizontal {
+  animation: scroll-horizontal-accreditations 40s linear infinite;
+}
+
+@keyframes scroll-horizontal-accreditations {
+  0% { 
+    transform: translateX(0); 
+  }
+  100% { 
+    transform: translateX(calc(-272px * 7)); /* Move by width of accreditation cards (264px + 8px gap) * 7 items */
+  }
+}

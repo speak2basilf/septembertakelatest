@@ -1,49 +1,40 @@
 import React from 'react';
 import { Award, Shield, CheckCircle } from 'lucide-react';
-import logo1 from '@assets/logo 1_1753167527585.png';
-import logo2 from '@assets/logo 2_1753167527586.png';
-import logo3 from '@assets/logo 3_1753167527589.png';
-import logo4 from '@assets/logo 4 copy_1753167527590.jpeg';
-import logo5 from '@assets/logo 5_1753167527593.jpeg';
-
-// Skill India and NSDC logos (using placeholder URLs as actual logos would need to be provided)
-const skillIndiaLogo = 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop';
-const nsdcLogo = 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop';
 
 const Accreditations: React.FC = () => {
   const accreditations = [
     {
-      logo: logo1,
+      logo: '/logo 1 copy.png',
       title: 'IAO Accreditation',
       description: 'International standards in healthcare education'
     },
     {
-      logo: logo2, 
+      logo: '/logo 2 copy.png', 
       title: 'ISO 9001:2015',
       description: 'Quality management system certification'
     },
     {
-      logo: logo3,
+      logo: '/logo 3 copy.png',
       title: 'LSSSDC Certified',
       description: 'Life Sciences Sector approved programs'
     },
     {
-      logo: logo4,
+      logo: '/logo 4 copy.jpeg',
       title: 'Council for Clinical Research & Education (CCRE)',
       description: 'Endorsed by regulatory authorities'
     },
     {
-      logo: logo5,
+      logo: '/logo 5 copy.jpeg',
       title: 'Asian International University, Manipur',
       description: 'Validated by healthcare leaders'
     },
     {
-      logo: skillIndiaLogo,
+      logo: '/attached_assets/image_1757577663020.png',
       title: 'Skill India',
       description: 'Government of India skill development initiative'
     },
     {
-      logo: nsdcLogo,
+      logo: '/attached_assets/image_1757577663020.png',
       title: 'NSDC',
       description: 'National Skill Development Corporation'
     }
@@ -75,47 +66,96 @@ const Accreditations: React.FC = () => {
           </p>
         </div>
 
-        {/* Accreditations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch">
-          {accreditations.map((accreditation, index) => (
-            <div key={index} className="group h-full">
-              <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center h-full flex flex-col">
-                {/* Logo container */}
-                <div className="h-20 shrink-0 flex items-center justify-center mb-4">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <img 
-                      src={accreditation.logo} 
-                      alt={accreditation.title}
-                      className="max-w-full max-h-full object-contain filter hover:brightness-110 transition-all duration-300"
-                      onError={(e) => {
-                        // Fallback to icon if image fails to load
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.style.display = 'none';
-                        const fallback = target.nextElementSibling as HTMLElement;
-                        if (fallback) {
-                          fallback.style.display = 'flex';
-                        }
-                      }}
-                    />
-                    {/* Fallback icon */}
-                    <div className="hidden w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl items-center justify-center">
-                      <Award className="text-white" size={24} />
+        {/* Scrolling Accreditations Container */}
+        <div className="relative overflow-hidden bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg">
+          {/* Gradient masks for smooth scroll effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white/60 to-transparent pointer-events-none z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white/60 to-transparent pointer-events-none z-10"></div>
+          
+          {/* Scrolling container */}
+          <div className="flex animate-scroll-horizontal space-x-8">
+            {/* First set of accreditations */}
+            {accreditations.map((accreditation, index) => (
+              <div key={`first-${index}`} className="flex-shrink-0 w-64 h-64 group">
+                <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center h-full flex flex-col justify-between">
+                  {/* Logo container with consistent sizing */}
+                  <div className="h-20 flex items-center justify-center mb-4">
+                    <div className="w-full h-full flex items-center justify-center">
+                      <img 
+                        src={accreditation.logo} 
+                        alt={accreditation.title}
+                        className="max-w-full max-h-full object-contain filter hover:brightness-110 transition-all duration-300"
+                        onError={(e) => {
+                          // Fallback to icon if image fails to load
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.style.display = 'none';
+                          const fallback = target.nextElementSibling as HTMLElement;
+                          if (fallback) {
+                            fallback.style.display = 'flex';
+                          }
+                        }}
+                      />
+                      {/* Fallback icon */}
+                      <div className="hidden w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl items-center justify-center">
+                        <Award className="text-white" size={24} />
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                {/* Title and description */}
-                <div className="mt-2 space-y-2 min-h-20">
-                  <h3 className="text-sm font-bold text-gray-900 mb-2 font-poppins">
-                    {accreditation.title}
-                  </h3>
-                  <p className="text-xs text-gray-600 font-poppins leading-relaxed">
-                    {accreditation.description}
-                  </p>
+                  
+                  {/* Title and description with consistent spacing */}
+                  <div className="flex-1 flex flex-col justify-center space-y-2">
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 font-poppins leading-tight">
+                      {accreditation.title}
+                    </h3>
+                    <p className="text-xs text-gray-600 font-poppins leading-relaxed">
+                      {accreditation.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+            
+            {/* Duplicate set for seamless infinite scroll */}
+            {accreditations.map((accreditation, index) => (
+              <div key={`second-${index}`} className="flex-shrink-0 w-64 h-64 group">
+                <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center h-full flex flex-col justify-between">
+                  {/* Logo container with consistent sizing */}
+                  <div className="h-20 flex items-center justify-center mb-4">
+                    <div className="w-full h-full flex items-center justify-center">
+                      <img 
+                        src={accreditation.logo} 
+                        alt={accreditation.title}
+                        className="max-w-full max-h-full object-contain filter hover:brightness-110 transition-all duration-300"
+                        onError={(e) => {
+                          // Fallback to icon if image fails to load
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.style.display = 'none';
+                          const fallback = target.nextElementSibling as HTMLElement;
+                          if (fallback) {
+                            fallback.style.display = 'flex';
+                          }
+                        }}
+                      />
+                      {/* Fallback icon */}
+                      <div className="hidden w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl items-center justify-center">
+                        <Award className="text-white" size={24} />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Title and description with consistent spacing */}
+                  <div className="flex-1 flex flex-col justify-center space-y-2">
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 font-poppins leading-tight">
+                      {accreditation.title}
+                    </h3>
+                    <p className="text-xs text-gray-600 font-poppins leading-relaxed">
+                      {accreditation.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom trust indicator */}
