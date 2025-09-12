@@ -134,7 +134,7 @@ const Hero: React.FC = () => {
               {/* CliniGlobal Instagram Post Image */}
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <img 
-                  src="/image copy copy copy copy.png"
+                  src="/cliniglobal-professional.png"
                   alt="CliniGlobal Research Institute - Happy Student" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
