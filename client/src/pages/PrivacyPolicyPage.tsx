@@ -24,7 +24,7 @@ const PrivacyPolicyPage: React.FC = () => {
               Your privacy is important to us. This policy explains how CliniGlobal collects, uses, and protects your information.
             </p>
             <p className="text-sm text-white/80 font-poppins">
-              Last updated: January 15, 2024
+              Last updated: January 15, 2025
             </p>
           </div>
         </div>
@@ -337,8 +337,7 @@ const PrivacyPolicyPage: React.FC = () => {
                 <Mail className="text-white" size={20} />
                 <div>
                   <p className="font-semibold font-poppins">Email</p>
-                  <p className="text-white/90 font-poppins">privacy@cliniglobal.com</p>
-                  <p className="text-white/90 font-poppins">info@cliniglobal.com</p>
+                  <p className="text-white/90 font-poppins">hr@cliniglobal.com</p>
                 </div>
               </div>
               
@@ -346,7 +345,7 @@ const PrivacyPolicyPage: React.FC = () => {
                 <Phone className="text-white" size={20} />
                 <div>
                   <p className="font-semibold font-poppins">Phone</p>
-                  <p className="text-white/90 font-poppins">+919052992967</p>
+                  <p className="text-white/90 font-poppins">+91 70937 94447</p>
                 </div>
               </div>
             </div>
@@ -357,10 +356,10 @@ const PrivacyPolicyPage: React.FC = () => {
                 <div>
                   <p className="font-semibold font-poppins">Address</p>
                   <p className="text-white/90 text-sm font-poppins">
-                    CliniGlobal Research Institute Private Limited<br/>
-                    125, 7th Cross Road, Off Bannerghatta Road<br/>
-                    Dollar Layout, BTM 2nd Stage<br/>
-                    Bangalore, Karnataka 560068
+                    CliniGlobal Research Institute<br/>
+                    303, Meghamala Apartment Road,<br/>
+                    Kumar Basti, Srinivasa Nagar, Ameerpet,<br/>
+                    Hyderabad, Telangana – 500082
                   </p>
                 </div>
               </div>
@@ -369,7 +368,7 @@ const PrivacyPolicyPage: React.FC = () => {
           
           <div className="text-center mt-8 pt-6 border-t border-white/20">
             <p className="text-white/80 text-sm font-poppins">
-              This Privacy Policy is effective as of January 15, 2024, and may be updated from time to time.
+              This Privacy Policy is effective as of January 15, 2025, and may be updated from time to time.
             </p>
           </div>
         </div>
