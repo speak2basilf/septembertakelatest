@@ -437,7 +437,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
         )}
-        )}
 
         {/* Locations Tab */}
         {activeTab === 'locations' && (
