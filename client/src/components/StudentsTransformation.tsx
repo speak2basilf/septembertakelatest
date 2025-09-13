@@ -7,22 +7,25 @@ const StudentsTransformation: React.FC = () => {
       quote: "CliniGlobal's Clinical Research Course completely transformed my career. The comprehensive training helped me understand GCP guidelines and regulatory processes. I secured a position at Apollo Hospitals within 3 weeks of completing the course.",
       name: "Lakshmi Sundaram",
       company: "Apollo Hospitals",
-      src: "/attached_assets/femal2_1753103497720.jpg",
+      initials: "LS",
       bgColor: "bg-green-100",
+      avatarColor: "bg-green-500",
     },
     {
       quote: "The Medical Coding Training at CliniGlobal was exceptional. The hands-on practice with ICD-10 and CPT codes gave me the confidence to crack my interview. Now I'm working with one of India's leading healthcare providers.",
       name: "Rajesh Krishnan",
       company: "Fortis Healthcare",
-      src: "/attached_assets/men1_1753103497721.jpg",
+      initials: "RK",
       bgColor: "bg-purple-100",
+      avatarColor: "bg-purple-500",
     },
     {
       quote: "Clinical SAS Training at CliniGlobal opened doors I never imagined. The real-world projects and expert mentorship helped me land my dream job in clinical data analysis. Highly recommend to anyone looking to advance their career.",
       name: "Priya Venkatesh",
       company: "Max Healthcare",
-      src: "/attached_assets/femal1_1753103497719.jpg",
+      initials: "PV",
       bgColor: "bg-orange-100",
+      avatarColor: "bg-orange-500",
     },
   ];
 
@@ -61,11 +64,11 @@ const StudentsTransformation: React.FC = () => {
               
               {/* Author Info */}
               <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.src}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className={`w-12 h-12 rounded-full ${testimonial.avatarColor} flex items-center justify-center`}>
+                  <span className="text-white font-semibold text-sm">
+                    {testimonial.initials}
+                  </span>
+                </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-lg">
                     {testimonial.name}
