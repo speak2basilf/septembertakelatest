@@ -111,12 +111,7 @@ function App() {
               <RefundPolicyPage />
             </CoursePageLayout>
           } />
-          {/* Placeholder routes for other courses */}
-          <Route path="/courses/crm" element={
-            <CoursePageLayout>
-              <CRMCourse />
-            </CoursePageLayout>
-          } />
+          {/* Additional course routes */}
           <Route path="/courses/pgdcr" element={
             <CoursePageLayout>
               <CRMCourse />
@@ -130,11 +125,6 @@ function App() {
           <Route path="/courses/clinical-sas" element={
             <CoursePageLayout>
               <ClinicalSASCourse />
-            </CoursePageLayout>
-          } />
-          <Route path="/courses/medical-coding" element={
-            <CoursePageLayout>
-              <MedicalCodingCourse />
             </CoursePageLayout>
           } />
           <Route path="/courses/bioinformatics" element={
