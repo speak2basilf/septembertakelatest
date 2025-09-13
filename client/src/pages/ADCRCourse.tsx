@@ -272,7 +272,7 @@ const ADCRCourse: React.FC = () => {
             className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-xl p-3 shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
             <div className="text-center">
-              <Download className="text-green-600 mx-auto mb-1 group-hover:scale-110 transition-transform" size={20} />
+              <Download className="text-blue-600 mx-auto mb-1 group-hover:scale-110 transition-transform" size={20} />
               <p className="text-xs font-medium text-gray-700">Brochure</p>
             </div>
           </div>
@@ -281,7 +281,7 @@ const ADCRCourse: React.FC = () => {
             className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-xl p-3 shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
             <div className="text-center">
-              <Phone className="text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" size={20} />
+              <Phone className="text-blue-600 mx-auto mb-1 group-hover:scale-110 transition-transform" size={20} />
               <p className="text-xs font-medium text-gray-700">Call</p>
             </div>
           </div>
@@ -290,7 +290,7 @@ const ADCRCourse: React.FC = () => {
             className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-xl p-3 shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
             <div className="text-center">
-              <svg className="text-green-600 mx-auto mb-1 group-hover:scale-110 transition-transform" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="text-blue-600 mx-auto mb-1 group-hover:scale-110 transition-transform" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               </svg>
               <p className="text-xs font-medium text-gray-700">WhatsApp</p>
@@ -300,14 +300,14 @@ const ADCRCourse: React.FC = () => {
       )}
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-12 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
             src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
             alt="Clinical Research Laboratory" 
             className="w-full h-full object-cover object-center brightness-125 contrast-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-600/70 via-green-600/50 to-blue-600/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/70 via-blue-600/50 to-indigo-600/70"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -361,7 +361,7 @@ const ADCRCourse: React.FC = () => {
               <ul className="space-y-3">
                 {highlights.map((highlight, index) => (
                   <li key={index} className="flex items-center font-poppins text-sm md:text-base">
-                    <CheckCircle className="text-green-400 mr-3" size={20} />
+                    <CheckCircle className="text-blue-400 mr-3" size={20} />
                     <span>{highlight}</span>
                   </li>
                 ))}
@@ -378,7 +378,7 @@ const ADCRCourse: React.FC = () => {
                   </button>
                   <button 
                     onClick={() => openContactModal('enroll')}
-                    className="w-full bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors font-poppins"
+                    className="w-full bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors font-poppins"
                   >
                     Enroll Now
                   </button>
@@ -397,7 +397,7 @@ const ADCRCourse: React.FC = () => {
       </div>
 
       {/* Navigation Bar */}
-      <div className="bg-white/95 backdrop-blur-lg border-b border-white/30 sticky top-[128px] z-40 shadow-xl border-t-2 border-t-green-200">
+      <div className="bg-white/95 backdrop-blur-lg border-b border-white/30 sticky top-[128px] z-40 shadow-xl border-t-2 border-t-blue-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-2 py-4 overflow-x-auto scrollbar-hide">
             {navigationSections.map((section) => (
@@ -406,8 +406,8 @@ const ADCRCourse: React.FC = () => {
                 onClick={() => scrollToSection(section.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap font-semibold border-2 shadow-lg hover:shadow-xl ${
                   activeSection === section.id
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white scale-110 border-green-600 shadow-green-500/30'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50 hover:scale-105 border-gray-200 hover:border-green-300 bg-white/80'
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white scale-110 border-blue-600 shadow-blue-500/30'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50 hover:scale-105 border-gray-200 hover:border-blue-300 bg-white/80'
                 }`}
               >
                 <section.icon size={20} />

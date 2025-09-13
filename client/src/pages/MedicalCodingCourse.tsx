@@ -223,13 +223,13 @@ const MedicalCodingCourse: React.FC = () => {
       )}
 
       {/* Modern Visual Hero Section */}
-      <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-20 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-600 via-blue-600 to-indigo-600 text-white py-20 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-yellow-400/20 rounded-lg animate-bounce"></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-blue-400/20 rounded-lg animate-bounce"></div>
           <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute top-1/2 right-1/3 w-18 h-18 bg-orange-400/20 rounded-lg animate-bounce"></div>
+          <div className="absolute top-1/2 right-1/3 w-18 h-18 bg-blue-400/20 rounded-lg animate-bounce"></div>
         </div>
 
         {/* Medical Coding Visual Elements */}

@@ -278,7 +278,7 @@ const ClinicalSASCourse: React.FC = () => {
             className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
             <div className="text-center">
-              <Download className="text-green-600 mx-auto mb-2 group-hover:scale-110 transition-transform" size={24} />
+              <Download className="text-blue-600 mx-auto mb-2 group-hover:scale-110 transition-transform" size={24} />
               <p className="text-xs font-medium text-gray-700">Download Brochure</p>
             </div>
           </div>
@@ -289,7 +289,7 @@ const ClinicalSASCourse: React.FC = () => {
             className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
             <div className="text-center">
-              <Phone className="text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" size={24} />
+              <Phone className="text-blue-600 mx-auto mb-2 group-hover:scale-110 transition-transform" size={24} />
               <p className="text-xs font-medium text-gray-700">Schedule Call</p>
             </div>
           </div>
@@ -300,7 +300,7 @@ const ClinicalSASCourse: React.FC = () => {
             className="bg-white/90 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
             <div className="text-center">
-              <svg className="text-green-600 mx-auto mb-2 group-hover:scale-110 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="text-blue-600 mx-auto mb-2 group-hover:scale-110 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               </svg>
               <p className="text-xs font-medium text-gray-700">WhatsApp</p>
@@ -343,7 +343,7 @@ const ClinicalSASCourse: React.FC = () => {
                 ))}
                 <span className="ml-2 text-gray-600 font-medium">4.9 (500+ reviews)</span>
               </div>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                 Most Popular
               </span>
               {/* Rough Sketch Highlight for #1 Healthcare Training Institute */}
@@ -406,7 +406,7 @@ const ClinicalSASCourse: React.FC = () => {
       </section>
 
       {/* Enhanced Navigation Bar */}
-      <div className="bg-white/95 backdrop-blur-lg border-b border-white/30 sticky top-[128px] z-40 shadow-xl border-t-2 border-t-purple-200">
+      <div className="bg-white/95 backdrop-blur-lg border-b border-white/30 sticky top-[128px] z-40 shadow-xl border-t-2 border-t-blue-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-2 py-4 overflow-x-auto scrollbar-hide">
             {navigationSections.map((section) => (
@@ -415,8 +415,8 @@ const ClinicalSASCourse: React.FC = () => {
                 onClick={() => scrollToSection(section.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap font-semibold border-2 shadow-lg hover:shadow-xl ${
                   activeSection === section.id
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white scale-110 border-purple-600 shadow-purple-500/30'
-                    : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50 hover:scale-105 border-gray-200 hover:border-purple-300 bg-white/80'
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white scale-110 border-blue-600 shadow-blue-500/30'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50 hover:scale-105 border-gray-200 hover:border-blue-300 bg-white/80'
                 }`}
               >
                 <section.icon size={20} />
@@ -454,37 +454,37 @@ const ClinicalSASCourse: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">Advanced SAS Programming</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">CDISC Standards (SDTM & ADaM)</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">Clinical Data Analysis</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">Statistical Reporting (TLFs)</span>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">R Programming Integration</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">Regulatory Submissions</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">Real Clinical Trial Projects</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1" />
                       <span className="text-gray-700">Industry Best Practices</span>
                     </div>
                   </div>
@@ -497,7 +497,7 @@ const ClinicalSASCourse: React.FC = () => {
                 <ul className="space-y-3">
                   {highlights.map((highlight, index) => (
                     <li key={index} className="flex items-center font-poppins text-sm md:text-base">
-                      <CheckCircle className="text-green-400 mr-3" size={20} />
+                      <CheckCircle className="text-blue-400 mr-3" size={20} />
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -508,14 +508,6 @@ const ClinicalSASCourse: React.FC = () => {
             {/* Right Column - Sticky Enrollment Card */}
             <div className="lg:col-span-1">
               <div className="sticky top-8 bg-white rounded-xl shadow-lg border border-gray-100 p-8">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-gray-900 mb-2">₹45,000</div>
-                  <div className="text-gray-500 line-through mb-2">₹65,000</div>
-                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium inline-block">
-                    30% Early Bird Discount
-                  </div>
-                </div>
-                
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Duration:</span>
@@ -524,14 +516,6 @@ const ClinicalSASCourse: React.FC = () => {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Mode:</span>
                     <span className="font-medium">Online + Offline</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">EMI Options:</span>
-                    <span className="font-medium">₹7,500/month</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Next Batch:</span>
-                    <span className="font-medium text-blue-600">March 15, 2024</span>
                   </div>
                 </div>
                 
