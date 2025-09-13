@@ -29,12 +29,12 @@ const Accreditations: React.FC = () => {
       description: 'Validated by healthcare leaders'
     },
     {
-      logo: '/attached_assets/image_1757577663020.png',
+      logo: '/attached_assets/Screenshot 2025-09-14 at 12.46.23 AM_1757791081237.png',
       title: 'Skill India',
       description: 'Government of India skill development initiative'
     },
     {
-      logo: '/attached_assets/image_1757577663020.png',
+      logo: '/attached_assets/Screenshot 2025-09-14 at 12.46.46 AM_1757791087323.png',
       title: 'NSDC',
       description: 'National Skill Development Corporation'
     }
