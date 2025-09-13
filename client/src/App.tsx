@@ -22,6 +22,7 @@ import LearningCentersPage from './pages/LearningCentersPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import RefundPolicyPage from './pages/RefundPolicyPage';
 import StudentsTransformation from './components/StudentsTransformation';
 
 // Main Home Page Component
@@ -103,6 +104,11 @@ function App() {
           <Route path="/privacy-policy" element={
             <CoursePageLayout>
               <PrivacyPolicyPage />
+            </CoursePageLayout>
+          } />
+          <Route path="/refund-policy" element={
+            <CoursePageLayout>
+              <RefundPolicyPage />
             </CoursePageLayout>
           } />
           {/* Placeholder routes for other courses */}
