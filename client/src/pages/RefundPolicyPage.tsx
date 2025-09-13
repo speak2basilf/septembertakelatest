@@ -21,7 +21,7 @@ const RefundPolicyPage: React.FC = () => {
               Refund <span className="text-yellow-400">Policy</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-4 max-w-3xl mx-auto font-poppins">
-              Clear and transparent refund guidelines for CliniGlobal training programs and services.
+              Clear and transparent no-refund policy for CliniGlobal training programs and services.
             </p>
             <p className="text-sm text-white/80 font-poppins">
               Last updated: January 15, 2025
@@ -38,201 +38,213 @@ const RefundPolicyPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 font-poppins">Introduction</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4 font-poppins">
-            CliniGlobal Research Institute Private Limited ("CliniGlobal") is committed to providing high-quality education and training services. This Refund Policy outlines the terms and conditions under which refunds may be requested and processed for our courses and services.
+            CliniGlobal Research Institute Private Limited ("CliniGlobal") is committed to providing high-quality education and training services. This Refund Policy clearly states that all payments made for our courses and services are final and non-refundable.
           </p>
           <p className="text-gray-700 leading-relaxed font-poppins">
-            By enrolling in our programs, you acknowledge that you have read, understood, and agree to the terms of this Refund Policy.
+            By enrolling in our programs and making payment, you acknowledge that you have read, understood, and agree to this strict no-refund policy.
           </p>
         </div>
 
-        {/* Refund Eligibility */}
+        {/* No Refund Policy */}
         <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
           <div className="flex items-center mb-6">
-            <DollarSign className="text-green-600 mr-4" size={28} />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Refund Eligibility</h2>
+            <DollarSign className="text-red-600 mr-4" size={28} />
+            <h2 className="text-2xl font-bold text-gray-900 font-poppins">No Refund Policy</h2>
           </div>
           
           <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Cooling-Off Period</h3>
-              <p className="text-gray-700 mb-3 font-poppins">Students have a 7-day cooling-off period from the date of enrollment to request a full refund, provided:</p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
-                <li>No more than 10% of course content has been accessed</li>
-                <li>No downloadable materials have been accessed</li>
-                <li>No live sessions have been attended</li>
-                <li>Request is made in writing within the cooling-off period</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Course Cancellation by CliniGlobal</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
-                <li>100% refund if course is cancelled due to insufficient enrollment</li>
-                <li>Full refund if course is cancelled due to technical issues</li>
-                <li>Alternative course placement or full refund options available</li>
-                <li>Refund processed within 15 business days</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Partial Refunds */}
-        <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
-          <div className="flex items-center mb-6">
-            <Clock className="text-orange-600 mr-4" size={28} />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Partial Refund Conditions</h2>
-          </div>
-          
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Timeline-Based Refunds</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border border-gray-200 rounded-lg">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900 font-poppins">Period</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900 font-poppins">Refund Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    <tr>
-                      <td className="px-4 py-3 text-sm text-gray-700 font-poppins">Within 7 days (Cooling-off)</td>
-                      <td className="px-4 py-3 text-sm text-gray-700 font-poppins">100% refund</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3 text-sm text-gray-700 font-poppins">8-30 days from enrollment</td>
-                      <td className="px-4 py-3 text-sm text-gray-700 font-poppins">50% refund (if less than 25% course completed)</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3 text-sm text-gray-700 font-poppins">31+ days from enrollment</td>
-                      <td className="px-4 py-3 text-sm text-gray-700 font-poppins">No refund available</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+              <div className="flex items-start space-x-3">
+                <AlertCircle className="text-red-600 mt-1" size={24} />
+                <div>
+                  <h3 className="text-lg font-semibold text-red-900 mb-3 font-poppins">Important Notice</h3>
+                  <p className="text-red-800 font-medium font-poppins mb-4">
+                    <strong>NO REFUNDS OR PARTIAL REFUNDS ARE ENTERTAINED UNDER ANY CIRCUMSTANCES.</strong>
+                  </p>
+                  <p className="text-red-700 font-poppins">
+                    All course fees, registration charges, and payments made to CliniGlobal Research Institute are final and non-refundable once the payment is processed.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-yellow-50 p-4 rounded-xl">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">This Policy Applies To:</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
+                <li>All course enrollments and registrations</li>
+                <li>Examination and certification fees</li>
+                <li>Study materials and resources</li>
+                <li>Live sessions and recorded content</li>
+                <li>Placement assistance services</li>
+                <li>Any additional services provided by CliniGlobal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Payment Terms */}
+        <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
+          <div className="flex items-center mb-6">
+            <Clock className="text-orange-600 mr-4" size={28} />
+            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Payment Terms</h2>
+          </div>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Final Payment Confirmation</h3>
+              <p className="text-gray-700 mb-4 font-poppins">
+                By completing the payment process, you confirm that:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
+                <li>You have carefully reviewed the course details and pricing</li>
+                <li>You understand that all payments are final and non-refundable</li>
+                <li>You agree to complete the course as per the scheduled timeline</li>
+                <li>You acknowledge that no refund will be provided for any reason</li>
+                <li>You accept full responsibility for your enrollment decision</li>
+              </ul>
+            </div>
+
+            <div className="bg-orange-50 p-4 rounded-xl">
               <div className="flex items-start space-x-3">
-                <AlertCircle className="text-yellow-600 mt-1" size={20} />
-                <p className="text-yellow-800 font-medium font-poppins">
-                  <strong>Important:</strong> Refund eligibility is subject to course progress and may vary based on individual circumstances.
+                <AlertCircle className="text-orange-600 mt-1" size={20} />
+                <p className="text-orange-800 font-medium font-poppins">
+                  <strong>Think Before You Pay:</strong> Please ensure you are fully committed to the course before making payment as no refunds will be provided.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Non-Refundable Items */}
+        {/* Why This Policy Exists */}
         <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
           <div className="flex items-center mb-6">
-            <AlertCircle className="text-red-600 mr-4" size={28} />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Non-Refundable Items</h2>
+            <AlertCircle className="text-blue-600 mr-4" size={28} />
+            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Why This Policy Exists</h2>
           </div>
           
           <div className="space-y-4">
-            <p className="text-gray-700 leading-relaxed font-poppins">
-              The following items and services are non-refundable under any circumstances:
+            <p className="text-gray-700 leading-relaxed font-poppins mb-4">
+              Our strict no-refund policy exists for the following reasons:
             </p>
             
-            <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
-              <li>Registration and processing fees</li>
-              <li>Examination and certification fees</li>
-              <li>Downloaded materials and resources</li>
-              <li>Completed assignments and project work</li>
-              <li>Live session recordings accessed</li>
-              <li>Career counseling and placement services availed</li>
-              <li>Third-party certification costs</li>
+            <ul className="list-disc list-inside text-gray-700 space-y-3 ml-4 font-poppins">
+              <li><strong>Resource Allocation:</strong> Course materials, instructor time, and resources are allocated based on confirmed enrollments</li>
+              <li><strong>Commitment:</strong> We believe serious commitment from students leads to better learning outcomes</li>
+              <li><strong>Administrative Efficiency:</strong> This policy allows us to focus on education rather than processing refund requests</li>
+              <li><strong>Fair Pricing:</strong> Our competitive pricing is possible because of this policy</li>
+              <li><strong>Course Integrity:</strong> Ensures all enrolled students are committed to completing the program</li>
             </ul>
+
+            <div className="bg-blue-50 p-4 rounded-xl mt-6">
+              <p className="text-blue-800 font-medium font-poppins">
+                <strong>Our Commitment:</strong> Instead of refunds, we focus on providing exceptional value through high-quality education, career support, and placement assistance.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Refund Process */}
+        {/* Payment Support */}
         <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
           <div className="flex items-center mb-6">
             <Users className="text-purple-600 mr-4" size={28} />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Refund Request Process</h2>
+            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Payment Support & Assistance</h2>
           </div>
           
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">How to Request a Refund</h3>
-              <ol className="list-decimal list-inside text-gray-700 space-y-2 ml-4 font-poppins">
-                <li>Submit a written refund request to hr@cliniglobal.com</li>
-                <li>Include your enrollment details and reason for refund</li>
-                <li>Provide supporting documentation if applicable</li>
-                <li>Allow 5-7 business days for review and response</li>
-                <li>Complete any required verification process</li>
-              </ol>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Before You Pay - We're Here to Help</h3>
+              <p className="text-gray-700 mb-3 font-poppins">
+                Since no refunds are available, we encourage you to contact us before enrollment if you have any questions:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
+                <li>Course curriculum and learning outcomes</li>
+                <li>Time commitment and study requirements</li>
+                <li>Career prospects and placement opportunities</li>
+                <li>Payment plans and installment options</li>
+                <li>Technical requirements and prerequisites</li>
+              </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Required Information</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 font-poppins">Alternative Solutions</h3>
+              <p className="text-gray-700 mb-3 font-poppins">
+                While refunds are not available, we may offer the following in exceptional circumstances:
+              </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
-                <li>Full name and contact information</li>
-                <li>Course name and enrollment date</li>
-                <li>Transaction ID or receipt number</li>
-                <li>Detailed reason for refund request</li>
-                <li>Bank account details for refund processing</li>
+                <li>Course deferral to next available batch (subject to terms)</li>
+                <li>Additional support and guidance for struggling students</li>
+                <li>Extended access to course materials (case-by-case basis)</li>
+                <li>One-on-one mentoring sessions for complex topics</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Processing Timeline */}
+        {/* Course Cancellation by CliniGlobal */}
         <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
           <div className="flex items-center mb-6">
             <Clock className="text-indigo-600 mr-4" size={28} />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Processing Timeline</h2>
+            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Course Cancellation by CliniGlobal</h2>
           </div>
           
           <div className="space-y-4">
+            <p className="text-gray-700 leading-relaxed font-poppins mb-4">
+              In the rare event that CliniGlobal needs to cancel a course, the following options will be provided:
+            </p>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-gray-900 font-poppins">Review Process</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4 font-poppins text-sm">
-                  <li>Initial review: 3-5 business days</li>
-                  <li>Verification process: 2-3 business days</li>
-                  <li>Decision notification: 1-2 business days</li>
-                  <li>Total review time: 5-10 business days</li>
+                <h3 className="text-lg font-semibold text-gray-900 font-poppins">Primary Options</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins text-sm">
+                  <li>Transfer to next available batch of the same course</li>
+                  <li>Transfer to an equivalent course with similar learning outcomes</li>
+                  <li>Credit towards any other CliniGlobal program</li>
+                  <li>Extended validity for future course enrollment</li>
                 </ul>
               </div>
               
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-gray-900 font-poppins">Refund Processing</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4 font-poppins text-sm">
-                  <li>Bank transfer: 5-7 business days</li>
-                  <li>Credit card refund: 7-14 business days</li>
-                  <li>Online payment: 3-5 business days</li>
-                  <li>Processing fees may apply</li>
+                <h3 className="text-lg font-semibold text-gray-900 font-poppins">Exceptional Cases Only</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins text-sm">
+                  <li>Refund only if no alternative courses are suitable</li>
+                  <li>Refund only if student cannot wait for next batch</li>
+                  <li>Decision at CliniGlobal's discretion</li>
+                  <li>Processing time: 30-45 business days</li>
                 </ul>
               </div>
+            </div>
+
+            <div className="bg-gray-50 p-4 rounded-xl">
+              <p className="text-gray-800 font-medium font-poppins">
+                <strong>Note:</strong> Course cancellations by CliniGlobal are extremely rare and typically occur only due to unforeseen circumstances beyond our control.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Special Circumstances */}
+        {/* Legal and Compliance */}
         <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-lg mb-12">
           <div className="flex items-center mb-6">
             <Globe className="text-green-600 mr-4" size={28} />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Special Circumstances</h2>
+            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Legal and Compliance</h2>
           </div>
           
           <div className="space-y-4">
-            <p className="text-gray-700 leading-relaxed font-poppins">
-              CliniGlobal may consider refunds outside the standard policy in exceptional circumstances:
+            <p className="text-gray-700 leading-relaxed font-poppins mb-4">
+              This no-refund policy is legally binding and enforceable under Indian law:
             </p>
             
             <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 font-poppins">
-              <li><strong>Medical Emergency:</strong> Documented medical conditions preventing course completion</li>
-              <li><strong>Technical Issues:</strong> Persistent platform problems affecting course access</li>
-              <li><strong>Course Quality:</strong> Significant deviation from promised course content</li>
-              <li><strong>Instructor Issues:</strong> Unavailability of qualified instructors</li>
+              <li><strong>Legal Agreement:</strong> Payment confirmation constitutes acceptance of this policy</li>
+              <li><strong>Consumer Rights:</strong> This policy complies with applicable consumer protection laws</li>
+              <li><strong>Dispute Resolution:</strong> Any disputes will be resolved through arbitration in Hyderabad</li>
+              <li><strong>Governing Law:</strong> This policy is governed by the laws of India</li>
+              <li><strong>Jurisdiction:</strong> Hyderabad courts have exclusive jurisdiction</li>
             </ul>
             
-            <div className="bg-blue-50 p-4 rounded-xl">
-              <p className="text-blue-800 font-medium font-poppins">
-                All special circumstance requests require proper documentation and are subject to management approval.
+            <div className="bg-gray-50 p-4 rounded-xl">
+              <p className="text-gray-800 font-medium font-poppins">
+                <strong>Acknowledgment:</strong> By making payment, you acknowledge that you have read and understood this policy and waive any right to claim refunds.
               </p>
             </div>
           </div>
@@ -241,9 +253,9 @@ const RefundPolicyPage: React.FC = () => {
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-3xl p-8 shadow-2xl">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-poppins">Contact Us for Refund Requests</h2>
+            <h2 className="text-2xl font-bold mb-4 font-poppins">Contact Us for Enrollment Support</h2>
             <p className="text-white/90 font-poppins">
-              For any refund-related queries or to initiate a refund request, please contact us:
+              For any questions about our courses or enrollment support before making payment, please contact us:
             </p>
           </div>
           
