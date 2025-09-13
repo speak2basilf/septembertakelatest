@@ -4,25 +4,22 @@ import { Star } from 'lucide-react';
 const StudentsTransformation: React.FC = () => {
   const testimonials = [
     {
-      quote: "You made it so simple. My new site is so much faster and easier to work with than my old site. Just choose the page, make the change.",
+      quote: "CliniGlobal's Clinical Research Course completely transformed my career. The comprehensive training helped me understand GCP guidelines and regulatory processes. I secured a position at Apollo Hospitals within 3 weeks of completing the course.",
       name: "Lakshmi Sundaram",
-      designation: "Freelance React Developer",
       company: "Apollo Hospitals",
       src: "/attached_assets/femal2_1753103497720.jpg",
       bgColor: "bg-green-100",
     },
     {
-      quote: "Simply the best. Better than all the rest. I'd recommend this product to beginners and advanced users.",
+      quote: "The Medical Coding Training at CliniGlobal was exceptional. The hands-on practice with ICD-10 and CPT codes gave me the confidence to crack my interview. Now I'm working with one of India's leading healthcare providers.",
       name: "Rajesh Krishnan",
-      designation: "Digital Marketer",
       company: "Fortis Healthcare",
       src: "/attached_assets/men1_1753103497721.jpg",
       bgColor: "bg-purple-100",
     },
     {
-      quote: "I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.",
+      quote: "Clinical SAS Training at CliniGlobal opened doors I never imagined. The real-world projects and expert mentorship helped me land my dream job in clinical data analysis. Highly recommend to anyone looking to advance their career.",
       name: "Priya Venkatesh",
-      designation: "Graphic Designer",
       company: "Max Healthcare",
       src: "/attached_assets/femal1_1753103497719.jpg",
       bgColor: "bg-orange-100",
@@ -43,7 +40,7 @@ const StudentsTransformation: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
-            Our happy clients say about us
+            Student Testimonials
           </h2>
         </div>
 
@@ -74,9 +71,6 @@ const StudentsTransformation: React.FC = () => {
                     {testimonial.name}
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    {testimonial.designation}
-                  </p>
-                  <p className="text-gray-500 text-xs">
                     {testimonial.company}
                   </p>
                 </div>
