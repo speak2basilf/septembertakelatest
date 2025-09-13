@@ -34,7 +34,7 @@ const Accreditations: React.FC = () => {
       description: 'Government of India skill development initiative'
     },
     {
-      logo: '/attached_assets/Screenshot%202025-09-14%20at%2012.46.46%20AM_1757791222631.png',
+      logo: '/attached_assets/Screenshot%202025-09-14%20at%2012.46.46%20AM_1757791087323.png',
       title: 'NSDC',
       description: 'National Skill Development Corporation'
     }
