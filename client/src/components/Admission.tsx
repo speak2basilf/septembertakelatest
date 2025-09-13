@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, CheckCircle, DollarSign, Calendar, Download, Users, Clock, Award, Heart, Star, Sparkles, GraduationCap, BookOpen, ArrowRight } from 'lucide-react';
+import { FileText, CheckCircle, Download, Award, Heart, Star, Sparkles, GraduationCap, BookOpen, ArrowRight } from 'lucide-react';
 
 const Admission: React.FC = () => {
   const [activeTab, setActiveTab] = useState('apply');
@@ -64,83 +64,12 @@ const Admission: React.FC = () => {
     },
     {
       step: 5,
-      title: 'Fee Payment',
-      description: 'Complete the fee payment through our secure online payment gateway.',
-      icon: DollarSign
-    },
-    {
-      step: 6,
       title: 'Confirmation',
       description: 'Receive confirmation email with course details and batch information.',
       icon: GraduationCap
     }
   ];
 
-  const paymentPlans = [
-    {
-      title: 'Full Payment',
-      description: 'Pay the complete course fee upfront',
-      discount: '10% discount',
-      features: ['Immediate course access', 'All study materials included', 'Priority support']
-    },
-    {
-      title: 'Installment Plan',
-      description: 'Split your payment into easy installments',
-      discount: '5% discount',
-      features: ['Flexible payment schedule', 'No additional charges', 'Course access after first payment']
-    },
-    {
-      title: 'Scholarship Program',
-      description: 'Merit-based scholarships available',
-      discount: 'Up to 30% off',
-      features: ['Based on academic performance', 'Limited seats available', 'Application required']
-    }
-  ];
-
-  const upcomingBatches = [
-    {
-      course: 'PG Diploma in Clinical Research',
-      startDate: 'March 15, 2024',
-      duration: '12 Months',
-      mode: 'Online + Offline',
-      seats: '25 seats available'
-    },
-    {
-      course: 'Advanced Diploma in Clinical SAS',
-      startDate: 'March 20, 2024',
-      duration: '6 Months',
-      mode: 'Online',
-      seats: '30 seats available'
-    },
-    {
-      course: 'Advanced Diploma in Bioinformatics',
-      startDate: 'March 25, 2024',
-      duration: '6 Months',
-      mode: 'Online',
-      seats: '35 seats available'
-    },
-    {
-      course: 'Advanced Diploma in Medical Coding',
-      startDate: 'March 30, 2024',
-      duration: '6 Months',
-      mode: 'Online + Offline',
-      seats: '40 seats available'
-    },
-    {
-      course: 'PG Diploma in AI & ML Healthcare',
-      startDate: 'April 1, 2024',
-      duration: '12 Months',
-      mode: 'Online + Offline',
-      seats: '20 seats available'
-    },
-    {
-      course: 'MBA in Healthcare Management',
-      startDate: 'April 10, 2024',
-      duration: '24 Months',
-      mode: 'Weekend Batches',
-      seats: '15 seats available'
-    }
-  ];
 
   return (
     <section id="admission" className="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden">
@@ -194,17 +123,6 @@ const Admission: React.FC = () => {
               >
                 <CheckCircle className="inline-block mr-2" size={16} />
                 Eligibility
-              </button>
-              <button
-                onClick={() => setActiveTab('fees')}
-                className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 text-sm ${
-                  activeTab === 'fees'
-                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-white/50'
-                }`}
-              >
-                <DollarSign className="inline-block mr-2" size={16} />
-                Schedule
               </button>
               <button
                 onClick={() => setActiveTab('brochure')}
@@ -321,53 +239,6 @@ const Admission: React.FC = () => {
           </div>
         )}
 
-        {/* Fees & Funding Tab */}
-        {activeTab === 'schedule' && (
-          <div className="space-y-8">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Batches</h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Choose from our upcoming batch schedules and secure your seat today
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {upcomingBatches.map((batch, index) => (
-                <div key={index} className="bg-white/40 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:bg-white/60 hover:scale-105 transition-all duration-500">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400/30 to-indigo-400/30 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <Calendar className="text-blue-600" size={20} />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-bold text-gray-900 mb-3">{batch.course}</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Start Date:</span>
-                          <span className="font-medium text-gray-900">{batch.startDate}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Duration:</span>
-                          <span className="font-medium text-gray-900">{batch.duration}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Mode:</span>
-                          <span className="font-medium text-gray-900">{batch.mode}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Availability:</span>
-                          <span className="font-medium text-green-600">{batch.seats}</span>
-                        </div>
-                      </div>
-                      <button className="w-full mt-4 bg-gradient-to-r from-blue-600/90 to-indigo-600/90 text-white px-6 py-2 rounded-full hover:from-blue-700/90 hover:to-indigo-700/90 transition-all duration-300 text-sm">
-                        Reserve Seat
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* Brochure Tab */}
         {activeTab === 'brochure' && (
@@ -403,7 +274,7 @@ const Admission: React.FC = () => {
               <div className="bg-white/40 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-lg">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Complete Course Catalog</h4>
                 <p className="text-gray-600 mb-6">
-                  Download our complete course catalog with all programs, fees, and admission details
+                  Download our complete course catalog with all programs and admission details
                 </p>
                 <button className="bg-gradient-to-r from-blue-600/90 to-indigo-600/90 text-white px-8 py-4 rounded-full hover:from-blue-700/90 hover:to-indigo-700/90 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto">
                   <Download size={20} />
