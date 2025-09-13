@@ -44,7 +44,7 @@ const CoursesPage: React.FC = () => {
         'Placement Assistance'
       ],
       route: '/courses/adcr',
-      color: 'green'
+      color: 'blue'
     },
     {
       id: 'clinical-sas',
@@ -63,7 +63,7 @@ const CoursesPage: React.FC = () => {
         'R Programming'
       ],
       route: '/courses/clinical-sas',
-      color: 'purple'
+      color: 'blue'
     },
     {
       id: 'medical-coding',
@@ -82,7 +82,7 @@ const CoursesPage: React.FC = () => {
         'CPC Certification Prep'
       ],
       route: '/courses/medical-coding',
-      color: 'emerald'
+      color: 'blue'
     },
     {
       id: 'ai-ml',
@@ -101,7 +101,7 @@ const CoursesPage: React.FC = () => {
         'Industry Projects'
       ],
       route: '/courses/ai-ml',
-      color: 'orange'
+      color: 'blue'
     },
     {
       id: 'mba',
@@ -120,7 +120,7 @@ const CoursesPage: React.FC = () => {
         'Executive Placement'
       ],
       route: '/courses/mba',
-      color: 'indigo'
+      color: 'blue'
     }
   ];
 
