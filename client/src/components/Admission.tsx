@@ -231,21 +231,18 @@ const Admission: React.FC = () => {
               {/* Desktop View - Horizontal Flow */}
               <div className="hidden lg:block">
                 <div className="relative">
-                  {/* Connecting Lines */}
-                  <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 transform -translate-y-1/2 rounded-full"></div>
-                  
                   {/* Steps Grid */}
-                  <div className="grid grid-cols-6 gap-6 relative z-10">
+                  <div className="grid grid-cols-6 gap-6">
                     {applicationSteps.map((step, index) => (
                       <div key={index} className="relative">
                         {/* Step Card */}
                         <div 
                           onClick={() => goToStep(index)}
                           data-testid={`step-card-${index + 1}`}
-                          className={`bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 border-2 cursor-pointer ${
+                          className={`bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 border-2 cursor-pointer h-48 flex flex-col justify-between ${
                             index === currentStep 
-                              ? `bg-gradient-to-br ${getStepColorClasses(step.color, true)} text-white transform scale-110 shadow-2xl` 
-                              : `${index < currentStep ? 'bg-gradient-to-br ' + getStepColorClasses(step.color, false) : 'border-gray-200 opacity-60'} hover:shadow-xl hover:scale-105`
+                              ? `bg-gradient-to-br ${getStepColorClasses(step.color, true)} text-white shadow-2xl` 
+                              : `${index < currentStep ? 'bg-gradient-to-br ' + getStepColorClasses(step.color, false) : 'border-gray-200 opacity-60'} hover:shadow-xl`
                           }`}
                         >
                           {/* Step Number Badge */}
@@ -272,17 +269,6 @@ const Admission: React.FC = () => {
                             </p>
                           </div>
                         </div>
-                        
-                        {/* Arrow for connecting steps */}
-                        {index < applicationSteps.length - 1 && (
-                          <div className="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20">
-                            <div className={`w-6 h-6 rounded-full flex items-center justify-center shadow-lg transition-colors duration-300 ${
-                              index < currentStep ? getArrowBgColor(applicationSteps[index + 1].color) : 'bg-gray-300'
-                            }`}>
-                              <ArrowRight className="text-white" size={14} />
-                            </div>
-                          </div>
-                        )}
                       </div>
                     ))}
                   </div>
@@ -299,8 +285,8 @@ const Admission: React.FC = () => {
                       data-testid={`mobile-step-card-${index + 1}`}
                       className={`rounded-2xl p-6 transition-all duration-300 border-2 cursor-pointer ${
                         index === currentStep 
-                          ? `bg-gradient-to-br ${getStepColorClasses(step.color, true)} text-white transform scale-105 shadow-2xl` 
-                          : `${index < currentStep ? 'bg-gradient-to-br ' + getStepColorClasses(step.color, false) : 'bg-white border-gray-200 opacity-60'} hover:shadow-xl hover:scale-102`
+                          ? `bg-gradient-to-br ${getStepColorClasses(step.color, true)} text-white shadow-2xl` 
+                          : `${index < currentStep ? 'bg-gradient-to-br ' + getStepColorClasses(step.color, false) : 'bg-white border-gray-200 opacity-60'} hover:shadow-xl`
                       }`}
                     >
                       <div className="flex items-center space-x-4">
