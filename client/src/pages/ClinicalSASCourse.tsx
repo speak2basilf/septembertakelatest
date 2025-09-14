@@ -164,12 +164,12 @@ const ClinicalSASCourse: React.FC = () => {
   ];
 
   const tools = [
-    { name: 'SAS', logo: '/api/placeholder/120/60' },
-    { name: 'R Programming', logo: '/api/placeholder/120/60' },
-    { name: 'Oracle Clinical', logo: '/api/placeholder/120/60' },
-    { name: 'Medidata Rave', logo: '/api/placeholder/120/60' },
-    { name: 'CDISC', logo: '/api/placeholder/120/60' },
-    { name: 'SQL Server', logo: '/api/placeholder/120/60' }
+    { name: 'SAS' },
+    { name: 'R Programming' },
+    { name: 'Oracle Clinical' },
+    { name: 'Medidata Rave' },
+    { name: 'CDISC' },
+    { name: 'SQL Server' }
   ];
 
   const testimonials = [
