@@ -129,11 +129,11 @@ const Hero: React.FC = () => {
           {/* Right Content - CliniGlobal Instagram Post */}
           <div className="relative">
             <div className="relative bg-white/40 backdrop-blur-lg border border-white/30 p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-              {/* CliniGlobal Student Hero Image */}
+              {/* CliniGlobal Professional Banner Image */}
               <img 
-                src="/indian-student-hero.png" 
+                src="/cliniglobal-hero-banner.png" 
                 alt="CliniGlobal Research Institute - Empowering Clinical Careers" 
-                className="w-full h-auto rounded-2xl shadow-lg"
+                className="w-full h-auto rounded-2xl shadow-lg object-cover object-center"
               />
             </div>
               
