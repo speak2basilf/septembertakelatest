@@ -76,12 +76,12 @@ const Footer: React.FC = () => {
                   <p className="text-gray-700 font-poppins text-sm leading-relaxed">
                     Learning Center - Hyderabad<br/>
                     CliniGlobal Research Institute<br/>
-                    303, Meghamala Apartment road,<br/>
-                    Kumar Basti, Srinivasa Nagar, Ameerpet,<br/>
+                    House No 38 (old) 3, situated at<br/>
+                    Gayatri Co-operative Housing Society, Ameerpet,<br/>
                     Hyderabad, Telangana - 500082
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=303,+Meghamala+Apartment+road,+Kumar+Basti,+Srinivasa+Nagar,+Ameerpet,+Hyderabad,+Telangana+500082" 
+                    href="https://maps.google.com/?q=House+No+38+(old)+3,+Gayatri+Co-operative+Housing+Society,+Ameerpet,+Hyderabad,+Telangana+500082" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 text-sm font-poppins hover:underline inline-flex items-center mt-2"

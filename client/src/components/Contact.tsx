@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
     {
       city: 'Learning Center - Hyderabad',
       address: 'CliniGlobal Research Institute',
-      fullAddress: '303, Meghamala Apartment road, Kumar Basti, Srinivasa Nagar, Ameerpet',
+      fullAddress: 'House No 38 (old) 3, situated at Gayatri Co-operative Housing Society, Ameerpet',
       pincode: 'Hyderabad, Telangana - 500082',
       phone: '+917093794447',
       email: 'hyderabad@cliniglobal.com'

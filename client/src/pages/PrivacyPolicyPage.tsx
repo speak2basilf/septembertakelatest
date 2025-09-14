@@ -357,8 +357,8 @@ const PrivacyPolicyPage: React.FC = () => {
                   <p className="font-semibold font-poppins">Address</p>
                   <p className="text-white/90 text-sm font-poppins">
                     CliniGlobal Research Institute<br/>
-                    303, Meghamala Apartment Road,<br/>
-                    Kumar Basti, Srinivasa Nagar, Ameerpet,<br/>
+                    House No 38 (old) 3, situated at<br/>
+                    Gayatri Co-operative Housing Society, Ameerpet,<br/>
                     Hyderabad, Telangana – 500082
                   </p>
                 </div>

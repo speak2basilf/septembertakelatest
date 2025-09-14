@@ -9,13 +9,13 @@ const LearningCentersPage: React.FC = () => {
       type: 'Learning Center',
       address: {
         line1: 'CliniGlobal Research Institute',
-        line2: '303, Meghamala Apartment Road,',
-        line3: 'Kumar Basti, Srinivasa Nagar, Ameerpet,',
+        line2: 'House No 38 (old) 3, situated at',
+        line3: 'Gayatri Co-operative Housing Society, Ameerpet,',
         line4: 'Hyderabad, Telangana - 500082'
       },
       phones: ['+917093794447'],
       email: 'hyderabad@cliniglobal.com',
-      mapUrl: 'https://maps.google.com/?q=Ameerpet,Hyderabad',
+      mapUrl: 'https://maps.google.com/?q=House+No+38+(old)+3,+Gayatri+Co-operative+Housing+Society,+Ameerpet,+Hyderabad',
       facilities: ['Modern Classrooms', 'Computer Lab', 'Library', 'Student Lounge'],
       timings: 'Mon-Sat: 9:00 AM - 7:00 PM',
       facilityImages: [
