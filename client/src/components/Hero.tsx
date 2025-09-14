@@ -64,9 +64,9 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
             <div className="space-y-6">
               <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-semibold tracking-wide rounded-full shadow-md">
                 <Award className="mr-1" size={12} />
@@ -126,19 +126,19 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Content - CliniGlobal Instagram Post */}
-          <div className="relative">
-            <div className="relative bg-white/40 backdrop-blur-lg border border-white/30 p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-              {/* CliniGlobal Professional Banner Image */}
+          {/* Right Content - CliniGlobal Professional Banner */}
+          <div className="relative mt-8 lg:mt-0 flex justify-center lg:justify-end">
+            <div className="relative bg-white/40 backdrop-blur-lg border border-white/30 p-4 md:p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 max-w-sm mx-auto lg:mx-0">
+              {/* CliniGlobal Professional Banner Image - Instagram Style Post */}
               <img 
-                src="/cliniglobal-hero-banner.png" 
+                src="/cliniglobal-hero-banner.png"
                 alt="CliniGlobal Research Institute - Empowering Clinical Careers" 
-                className="w-full h-auto rounded-2xl shadow-lg object-cover object-center"
+                className="w-full max-w-md mx-auto h-auto rounded-2xl shadow-lg object-cover object-center"
               />
             </div>
               
               {/* Course Highlights with Healthcare Icons */}
-              <div className="mt-6 space-y-4">
+              <div className="mt-6 space-y-4 hidden lg:block">
                 <div className="flex items-center space-x-3 p-3 bg-white/30 backdrop-blur-md rounded-xl border border-white/30 hover:bg-white/40 transition-all duration-300">
                   <div className="w-8 h-8 bg-blue-100/80 rounded-full flex items-center justify-center">
                     <BookOpen className="text-blue-600" size={16} />
