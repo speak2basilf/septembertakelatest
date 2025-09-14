@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
             {/* Copyright */}
             <div className="text-center md:text-left">
               <p className="text-gray-600 text-sm font-poppins">
-                © 2024 CliniGlobal Research Institute Private Limited. All rights reserved.
+                © 2025 CliniGlobal Research Institute Private Limited. All rights reserved.
               </p>
             </div>
             
