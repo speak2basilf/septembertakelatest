@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Calendar, Award, Users, BookOpen, Heart, Star, Sparkles, Stethoscope, Activity, Brain, Microscope, Pill, Shield, Zap, Database } from 'lucide-react';
+import { ArrowRight, Calendar, Award, Users, BookOpen, Heart, Star, Sparkles, Stethoscope, Activity, Brain, Microscope, Pill, Shield, Zap, Database, Laptop, Briefcase, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
@@ -109,6 +109,54 @@ const Hero: React.FC = () => {
                 <span>Enroll Now</span>
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </button>
+            </div>
+            
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 max-w-2xl">
+              {/* Advanced LMS Support */}
+              <div className="group bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 border border-white/20 hover:border-blue-300/30" data-testid="card-lms-support">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-blue-500/20 rounded-lg blur-sm group-hover:blur-md group-hover:bg-blue-500/30 transition-all duration-500"></div>
+                    <Laptop className="relative text-blue-600 group-hover:scale-110 transition-transform duration-300" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Advanced LMS</h3>
+                    <p className="text-xs text-gray-600">Support</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 100% Placement Assistance */}
+              <div className="group bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 border border-white/20 hover:border-green-300/30" data-testid="card-placement-assistance">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-green-500/20 rounded-lg blur-sm group-hover:blur-md group-hover:bg-green-500/30 transition-all duration-500"></div>
+                    <div className="relative flex items-center">
+                      <Briefcase className="text-green-600 group-hover:scale-110 transition-transform duration-300" size={20} />
+                      <Check className="text-green-500 -ml-1 group-hover:animate-bounce" size={14} />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-gray-800 group-hover:text-green-600 transition-colors duration-300">100% Placement</h3>
+                    <p className="text-xs text-gray-600">Assistance</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Industry Recognised Certifications */}
+              <div className="group bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 border border-white/20 hover:border-yellow-300/30" data-testid="card-certifications">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-yellow-400/30 rounded-lg blur-md group-hover:blur-lg group-hover:bg-yellow-400/50 transition-all duration-500 animate-pulse"></div>
+                    <Award className="relative text-yellow-600 group-hover:scale-110 transition-transform duration-300 drop-shadow-md" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-gray-800 group-hover:text-yellow-600 transition-colors duration-300">Industry Recognised</h3>
+                    <p className="text-xs text-gray-600">Certifications</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
